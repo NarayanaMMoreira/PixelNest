@@ -53,9 +53,6 @@ const GameList = styled.ul`
   box-sizing: border-box;
   justify-content: center;
 
-  @media (max-width: 768px) {
-    padding: 1rem;
-  }
 `;
 
 const GameItem = styled.li`
