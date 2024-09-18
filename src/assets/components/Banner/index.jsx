@@ -84,13 +84,13 @@ const TextBox = styled.div`
 const Banner = () => {
   return (
     <BannerContainer>
-      <BannerImage src="public\images\Menina.png" alt="Robo" />
+      <BannerImage src="/images/Menina.png" alt="Robo" />
       <TextBox>
         <h2>Bem-vindo a</h2>
         <h1>PixelNest!</h1>
         <p>Mergulhe em uma jornada envolvente através dos corredores da nossa galeria virtual e descubra a magia dos jogos!</p>
       </TextBox>
-      <BannerImage src="public\images\Robo.png" alt="Menina" />
+      <BannerImage src="/images/Robo.png" alt="Menina" />
     </BannerContainer>
   );
 };
