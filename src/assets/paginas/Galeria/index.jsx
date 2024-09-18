@@ -54,7 +54,7 @@ const GameList = styled.ul`
   justify-content: center;
 
   @media (max-width: 768px) {
-    padding: 0;
+    padding: 1rem;
   }
 `;
 
