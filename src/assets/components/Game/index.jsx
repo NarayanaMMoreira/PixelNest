@@ -50,7 +50,7 @@ const Game = ({ game }) => {
     <Card>
       <GameImage src={`/games/${game.id}/foto.png`} alt={game.title} />
       <GameTitle>{game.title}</GameTitle>
-      <Button to={`/Galeria/${game.title}`}>Descubra mais</Button>
+      <Button to={`/Galeria/${game.id_nome}`}>Descubra mais</Button>
     </Card>
   );
 };

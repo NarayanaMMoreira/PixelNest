@@ -7,6 +7,7 @@ import EducaMais from './assets/paginas/EducaMais';
 import NotFound from './assets/paginas/NotFound';
 import GlobalStyle from './assets/components/EstilosGlobais'
 import Rodape from './assets/components/Rodape';
+import GamePage from './assets/paginas/GamePage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/galeria" element={<Galeria />} />
         <Route path="/educa-mais" element={<EducaMais />} />
+        <Route path="/galeria/:id" element={<GamePage />} />
         <Route path="*" element={<NotFound />} /> 
       </Routes>
       <Rodape />

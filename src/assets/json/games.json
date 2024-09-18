@@ -1,6 +1,7 @@
 [
       {
         "id": 1,
+        "id_nome": "overcooked",
         "title": "Overcooked",
         "catchphrase": "Caos culinário cooperativo!",
         "summary": "Overcooked é um jogo de simulação culinária que coloca os jogadores em cozinhas desafiadoras e caóticas. Trabalhando em equipe, você deve preparar e servir pratos antes que o tempo acabe.",
@@ -14,6 +15,7 @@
       },
       {
         "id": 2,
+        "id_nome": "mariokart",
         "title": "Mario Kart",
         "catchphrase": "Aqui, a vitória pode virar o jogo a qualquer momento!",
         "summary": "Mario Kart é uma das franquias de corrida mais amadas, onde personagens icônicos do universo Mario competem em pistas malucas, usando itens especiais para ganhar vantagem sobre os adversários.",
@@ -27,6 +29,7 @@
       },
       {
         "id": 3,
+        "id_nome": "mortalkombat",
         "title": "Mortal Kombat",
         "catchphrase": "Finish him!",
         "summary": "Mortal Kombat é uma icônica franquia de jogos de luta conhecida por suas batalhas sangrentas e movimentos finais brutais, os 'Fatalities'.",
@@ -40,6 +43,7 @@
       },
       {
         "id": 4,
+        "id_nome": "thesims",
         "title": "The Sims 4",
         "catchphrase": "Viva suas melhores vidas virtuais!",
         "summary": "The Sims 4 é um simulador de vida que permite aos jogadores criar e controlar pessoas virtuais, conhecidas como Sims, enquanto vivem suas vidas cotidianas.",
@@ -53,6 +57,7 @@
       },
       {
         "id": 5,
+        "id_nome": "zelda",
         "title": "The Legend of Zelda",
         "catchphrase": "É perigoso ir sozinho! Pegue isto.",
         "summary": "The Legend of Zelda é uma das franquias de aventura mais icônicas, onde o jogador controla Link em sua jornada para salvar o reino de Hyrule e a princesa Zelda das forças do mal.",
@@ -66,6 +71,7 @@
       },
       {
         "id": 6,
+        "id_nome": "pacman",
         "title": "Pac-Man",
         "catchphrase": "Waka waka waka!",
         "summary": "Pac-Man é um dos jogos de arcade mais icônicos de todos os tempos, onde o jogador controla Pac-Man enquanto ele navega por labirintos, comendo pastilhas e fugindo dos fantasmas.",
