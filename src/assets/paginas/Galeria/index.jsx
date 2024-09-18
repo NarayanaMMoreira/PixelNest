@@ -49,8 +49,13 @@ const GameList = styled.ul`
   flex-wrap: wrap;
   gap: 100px;
   list-style-type: none;
-  padding: 0;
+  padding: 5rem;
+  box-sizing: border-box;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 const GameItem = styled.li`
