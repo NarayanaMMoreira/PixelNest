@@ -1,0 +1,81 @@
+[
+      {
+        "id": 1,
+        "title": "Overcooked",
+        "catchphrase": "Caos culinário cooperativo!",
+        "summary": "Overcooked é um jogo de simulação culinária que coloca os jogadores em cozinhas desafiadoras e caóticas. Trabalhando em equipe, você deve preparar e servir pratos antes que o tempo acabe.",
+        "release_year": "2016",
+        "gameplay": "Overcooked oferece uma experiência de cooperação frenética, onde até quatro jogadores precisam coordenar e realizar tarefas na cozinha. Desde cortar ingredientes até cozinhar e lavar pratos, o caos é garantido conforme as receitas se tornam mais complexas e os níveis mais desafiadores.",
+        "curiosities": [
+          "Foi desenvolvido por uma equipe de apenas dois desenvolvedores na Ghost Town Games.",
+          "O jogo ficou famoso por colocar à prova a amizade dos jogadores devido ao seu ritmo frenético.",
+          "Overcooked ganhou o prêmio de Melhor Jogo Familiar no BAFTA Games Awards de 2017."
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Mario Kart",
+        "catchphrase": "Aqui, a vitória pode virar o jogo a qualquer momento!",
+        "summary": "Mario Kart é uma das franquias de corrida mais amadas, onde personagens icônicos do universo Mario competem em pistas malucas, usando itens especiais para ganhar vantagem sobre os adversários.",
+        "release_year": "1992",
+        "gameplay": "Em Mario Kart, os jogadores correm em pistas repletas de curvas, rampas e perigos, enquanto coletam itens como cascos de tartaruga e bananas para atrapalhar seus oponentes. O jogo é conhecido por seu multiplayer competitivo e sua acessibilidade para jogadores de todas as idades.",
+        "curiosities": [
+          "A ideia original era criar um jogo de corrida com personagens da Nintendo, mas sem Mario; ele foi adicionado posteriormente.",
+          "O famoso item 'Casco Azul' foi introduzido em Mario Kart 64 para equilibrar o jogo, dando aos jogadores em último lugar uma chance de vencer.",
+          "Mario Kart 8 Deluxe é o jogo de corrida mais vendido da história."
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Mortal Kombat",
+        "catchphrase": "Finish him!",
+        "summary": "Mortal Kombat é uma icônica franquia de jogos de luta conhecida por suas batalhas sangrentas e movimentos finais brutais, os 'Fatalities'.",
+        "release_year": "1992",
+        "gameplay": "Mortal Kombat é um jogo de luta onde os jogadores escolhem personagens com habilidades únicas para competir em duelos intensos. A mecânica de combate é focada em combos, ataques especiais e a execução dos famosos 'Fatalities', movimentos finais que derrotam os oponentes de maneira espetacular.",
+        "curiosities": [
+          "Mortal Kombat foi um dos principais jogos a motivar a criação da ESRB, o órgão de classificação indicativa de jogos.",
+          "O movimento 'Fatality' tornou-se um dos elementos mais famosos da cultura dos games.",
+          "O jogo original foi criado em apenas 10 meses."
+        ]
+      },
+      {
+        "id": 4,
+        "title": "The Sims 4",
+        "catchphrase": "Viva suas melhores vidas virtuais!",
+        "summary": "The Sims 4 é um simulador de vida que permite aos jogadores criar e controlar pessoas virtuais, conhecidas como Sims, enquanto vivem suas vidas cotidianas.",
+        "release_year": "2014",
+        "gameplay": "No The Sims 4, os jogadores constroem casas, desenvolvem relacionamentos e guiam seus Sims em suas vidas diárias. O jogo oferece uma ampla gama de personalização, desde aparência e traços de personalidade até as carreiras e aspirações dos Sims.",
+        "curiosities": [
+          "The Sims é a franquia de simulador de vida mais vendida de todos os tempos.",
+          "O jogo é conhecido por sua comunidade ativa de modders, que criam conteúdos personalizados.",
+          "Foi o primeiro jogo da franquia a permitir que Sims tivessem emoções complexas, influenciando suas ações e interações."
+        ]
+      },
+      {
+        "id": 5,
+        "title": "The Legend of Zelda",
+        "catchphrase": "É perigoso ir sozinho! Pegue isto.",
+        "summary": "The Legend of Zelda é uma das franquias de aventura mais icônicas, onde o jogador controla Link em sua jornada para salvar o reino de Hyrule e a princesa Zelda das forças do mal.",
+        "release_year": "1986",
+        "gameplay": "Em The Legend of Zelda, os jogadores exploram vastos mundos abertos, resolvem quebra-cabeças e enfrentam inimigos poderosos. O jogo combina ação em tempo real com exploração e narrativa profunda, cativando gerações de jogadores.",
+        "curiosities": [
+          "Foi um dos primeiros jogos a permitir salvar o progresso do jogador.",
+          "Shigeru Miyamoto, criador da série, se inspirou nas explorações de infância pelas florestas de Kyoto para criar o conceito do jogo.",
+          "Zelda foi nomeada após a esposa do famoso autor F. Scott Fitzgerald, Zelda Fitzgerald."
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Pac-Man",
+        "catchphrase": "Waka waka waka!",
+        "summary": "Pac-Man é um dos jogos de arcade mais icônicos de todos os tempos, onde o jogador controla Pac-Man enquanto ele navega por labirintos, comendo pastilhas e fugindo dos fantasmas.",
+        "release_year": "1980",
+        "gameplay": "Em Pac-Man, o objetivo é guiar o personagem por um labirinto, comendo todas as pastilhas enquanto evita os quatro fantasmas que tentam capturá-lo. O jogo é simples, mas oferece uma jogabilidade viciante e estratégia para evitar os inimigos e maximizar a pontuação.",
+        "curiosities": [
+          "O formato do Pac-Man foi inspirado em uma pizza com uma fatia faltando.",
+          "Pac-Man foi o primeiro videogame a introduzir personagens inimigos com IA diferenciada.",
+          "A palavra 'Pac-Man' vem da expressão japonesa 'paku-paku', que significa 'abrir e fechar a boca'."
+        ]
+      }
+    ]
+  
