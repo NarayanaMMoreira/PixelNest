@@ -22,7 +22,7 @@ const Banner = styled.div`
   margin: 60px 0;
 
   @media (max-width: 768px) {
-    height: 30vh; 
+    height: 40vh; 
   }
 `;
 

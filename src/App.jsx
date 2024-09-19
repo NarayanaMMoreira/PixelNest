@@ -8,6 +8,7 @@ import NotFound from './assets/paginas/NotFound';
 import GlobalStyle from './assets/components/EstilosGlobais'
 import Rodape from './assets/components/Rodape';
 import GamePage from './assets/paginas/GamePage';
+import ArtigoPage from './assets/paginas/ArtigoPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/galeria" element={<Galeria />} />
         <Route path="/educa-mais" element={<EducaMais />} />
+        <Route path="/educa-mais/:id" element={<ArtigoPage />} />
         <Route path="/galeria/:id" element={<GamePage />} />
         <Route path="*" element={<NotFound />} /> 
       </Routes>

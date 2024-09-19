@@ -16,17 +16,27 @@ const Card = styled.div`
   text-align: center;
 `;
 
-const GameImage = styled.img`
+const ArtigoImage = styled.img`
   width: 100%;
   object-fit: cover;
 `;
 
-const GameTitle = styled.h3`
+const ArtigoTitle = styled.h3`
   font-size: 20px;
+  width: 80%;
   font-weight: bold;
   color: var(--primary-color);
   margin: 10px 0;
 `;
+
+const Resumo = styled.div`
+width: 80%;
+ 
+ p{
+  font-size: 1rem;
+  text-align: left;
+ }
+`
 
 const Button = styled(Link)`
   text-decoration: none;
@@ -45,14 +55,15 @@ const Button = styled(Link)`
   }
 `;
 
-const Game = ({ game }) => {
+const Artigo = ({ artigo }) => {
   return (
     <Card>
-      <GameImage src={`/games/${game.id}/foto.png`} alt={game.title} />
-      <GameTitle>{game.title}</GameTitle>
-      <Button to={`/Galeria/${game.id_nome}`}>Descubra mais</Button>
+      <ArtigoImage src={`/games/${artigo.id}/foto.png`} alt={artigo.title} />
+      <ArtigoTitle>{artigo.title}</ArtigoTitle>
+      <Resumo><p>{artigo.resumo}</p></Resumo>
+      <Button to={`/educa-mais/${artigo.id}`}>Descubra mais</Button>
     </Card>
   );
 };
 
-export default Game;
+export default Artigo;
