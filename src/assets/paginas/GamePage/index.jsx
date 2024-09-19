@@ -32,14 +32,15 @@ const Title = styled.h1`
   font-size: 5rem;
 
   @media (max-width: 768px) {
-    font-size: 3rem; 
+    font-size: 2.3rem; 
   }
 
 `;
 
 const Catchphrase = styled.p`
+  font-style: italic;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
 `;
 
 const ImagesContainer = styled.div`
