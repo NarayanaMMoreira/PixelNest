@@ -87,7 +87,7 @@ const Titulo = styled.div`
   }
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.8rem !important;
   }
 `;
 
