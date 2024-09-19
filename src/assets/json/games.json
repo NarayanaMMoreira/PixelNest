@@ -2,16 +2,17 @@
       {
         "id": 1,
         "id_nome": "overcooked",
-        "title": "Overcooked",
-        "catchphrase": "Caos culinário cooperativo!",
-        "summary": "Overcooked é um jogo de simulação culinária que coloca os jogadores em cozinhas desafiadoras e caóticas. Trabalhando em equipe, você deve preparar e servir pratos antes que o tempo acabe.",
+        "title": "Overcooked!",
+        "catchphrase": "É um pesadelo, na cozinha!",
+        "summary": "Overcooked foi criado pelo estúdio britânico Ghost Town Games, fundado por dois ex-desenvolvedores da Frontier Developments, Phil Duncan e Oli De-Vine. Eles queriam criar um jogo focado na cooperação e que incentivasse a comunicação entre os jogadores, levando à criação de um simulador de cozinha caótico. Lançado em 2016, Overcooked conquistou sucesso rapidamente por sua jogabilidade frenética e cooperativa, onde os jogadores atuam como chefs em cozinhas com desafios imprevisíveis. A sequência, Overcooked 2, foi lançada em 2018, adicionando novos recursos, como jogabilidade online, novos ambientes e desafios mais dinâmicos. A série, publicada pela Team17, é conhecida por seu foco em trabalho em equipe e diversão multiplayer.",
         "release_year": "2016",
-        "gameplay": "Overcooked oferece uma experiência de cooperação frenética, onde até quatro jogadores precisam coordenar e realizar tarefas na cozinha. Desde cortar ingredientes até cozinhar e lavar pratos, o caos é garantido conforme as receitas se tornam mais complexas e os níveis mais desafiadores.",
+        "gameplay": "A gameplay de Overcooked é focada na cooperação e no trabalho em equipe. Os jogadores, controlando chefs, devem se organizar para cortar, cozinhar, montar pratos e servir os pedidos dentro de um tempo limitado. Conforme as fases avançam, as cozinhas se tornam mais desafiadoras, com obstáculos como plataformas móveis, esteiras rolantes e incêndios. A comunicação entre os jogadores é crucial, já que cada um precisa coordenar suas ações para evitar atrasos e completar os pedidos com eficiência. O caos na cozinha é inevitável, mas o objetivo é sempre manter a calma e entregar o máximo de pratos possível.",
         "curiosities": [
-          "Foi desenvolvido por uma equipe de apenas dois desenvolvedores na Ghost Town Games.",
-          "O jogo ficou famoso por colocar à prova a amizade dos jogadores devido ao seu ritmo frenético.",
-          "Overcooked ganhou o prêmio de Melhor Jogo Familiar no BAFTA Games Awards de 2017."
-        ]
+          "Criação por uma Pequena Equipe: Overcooked foi desenvolvido por apenas dois criadores, Phil Duncan e Oli De-Vine, que queriam um jogo que incentivasse a comunicação entre amigos. A simplicidade da ideia, aliada à jogabilidade caótica, foi o que o tornou um sucesso instantâneo.",
+          "Um Jogo de Culinária Sem Receitas Reais: Embora Overcooked seja um jogo de cozinha, nenhuma das receitas é detalhada ou segue ingredientes reais. O foco está mais na cooperação entre os jogadores do que na precisão culinária.",
+          "Jogo Aclamado pela Crítica: Overcooked recebeu diversos prêmios, incluindo o BAFTA Games Award por Melhor Jogo Familiar, e foi elogiado por sua mecânica simples e acessível, que proporciona diversão para jogadores de todas as idades."
+        ],
+        "video_id": "Ob6VIECzAFk"
       },
       {
         "id": 2,
@@ -25,7 +26,8 @@
           "A ideia original era criar um jogo de corrida com personagens da Nintendo, mas sem Mario; ele foi adicionado posteriormente.",
           "O famoso item 'Casco Azul' foi introduzido em Mario Kart 64 para equilibrar o jogo, dando aos jogadores em último lugar uma chance de vencer.",
           "Mario Kart 8 Deluxe é o jogo de corrida mais vendido da história."
-        ]
+        ],
+        "video_id": "qktchbR-EX4"
       },
       {
         "id": 3,
@@ -39,7 +41,8 @@
           "Mortal Kombat foi um dos principais jogos a motivar a criação da ESRB, o órgão de classificação indicativa de jogos.",
           "O movimento 'Fatality' tornou-se um dos elementos mais famosos da cultura dos games.",
           "O jogo original foi criado em apenas 10 meses."
-        ]
+        ],
+        "video_id": "86D2q2Uvg9M"
       },
       {
         "id": 4,
@@ -53,7 +56,8 @@
           "The Sims é a franquia de simulador de vida mais vendida de todos os tempos.",
           "O jogo é conhecido por sua comunidade ativa de modders, que criam conteúdos personalizados.",
           "Foi o primeiro jogo da franquia a permitir que Sims tivessem emoções complexas, influenciando suas ações e interações."
-        ]
+        ],
+        "video_id": "Ob6VIECzAFk"
       },
       {
         "id": 5,
@@ -67,7 +71,8 @@
           "Foi um dos primeiros jogos a permitir salvar o progresso do jogador.",
           "Shigeru Miyamoto, criador da série, se inspirou nas explorações de infância pelas florestas de Kyoto para criar o conceito do jogo.",
           "Zelda foi nomeada após a esposa do famoso autor F. Scott Fitzgerald, Zelda Fitzgerald."
-        ]
+        ],
+        "video_id": "Ob6VIECzAFk"
       },
       {
         "id": 6,
@@ -81,7 +86,8 @@
           "O formato do Pac-Man foi inspirado em uma pizza com uma fatia faltando.",
           "Pac-Man foi o primeiro videogame a introduzir personagens inimigos com IA diferenciada.",
           "A palavra 'Pac-Man' vem da expressão japonesa 'paku-paku', que significa 'abrir e fechar a boca'."
-        ]
+        ],
+        "video_id": "Ob6VIECzAFk"
       }
     ]
   
