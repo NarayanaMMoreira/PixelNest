@@ -10,7 +10,7 @@ const PageContainer = styled.div`
 const Banner = styled.div`
   text-align: center;
   width: 100%;
-  height: 400px; 
+  height: 50vh; 
   background-image: url(${(props) => props.background});
   background-size: cover;
   background-position: center;
@@ -18,24 +18,42 @@ const Banner = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 60px 0 ;
-`;
+  margin: 60px 0;
 
+  @media (max-width: 768px) {
+    height: 30vh;  /* Altura ajustada para telas menores */
+  }
+`;
 
 const Title = styled.h1`
   color: #ffffff;
   margin: 30px 0 0 0;
   font-size: 5rem;
 
-  @media (max-width: 768px) {
-    font-size: 3rem;
+  @media (max-width: 1024px) {
+    font-size: 4rem; /* Para tablets ou telas intermediárias */
+  }
 
+  @media (max-width: 768px) {
+    font-size: 3rem; /* Tamanho de fonte ajustado para telas menores */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2.5rem; /* Para dispositivos muito pequenos */
   }
 `;
 
 const Catchphrase = styled.p`
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem; /* Ajuste para telas menores */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem; /* Tamanho ajustado para dispositivos pequenos */
+  }
 `;
 
 const ImagesContainer = styled.div`
@@ -69,11 +87,11 @@ const Summary = styled.p`
   margin-right: auto;
 `;
 
-
 const Gameplay = styled.h2`
-align-items: center;
-text-align: center;
-`
+  align-items: center;
+  text-align: center;
+`;
+
 const VideoContainer = styled.div`
   align-items: center;
   justify-content: center;
@@ -81,8 +99,6 @@ const VideoContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 50px;
-  
-
 
   iframe {
     width: 40%;
@@ -102,14 +118,13 @@ const VideoContainer = styled.div`
     flex-direction: column;
 
     iframe {
-        width: 90%;
+      width: 90%;
     }
 
     p {
-        width: 85%;
+      width: 85%;
     }
   }
-
 `;
 
 const CuriositiesContainer = styled.div`
@@ -136,8 +151,8 @@ const CuriositiesContainer = styled.div`
 `;
 
 const GamePage = () => {
-  const parametros = useParams();
-  const game = games.find((game) => game.id_nome === parametros.id);
+  const { id } = useParams();
+  const game = games.find((game) => game.id_nome === id);
 
   if (!game) {
     return <p>Jogo não encontrado</p>;
@@ -161,7 +176,6 @@ const GamePage = () => {
 
       <Gameplay>Sobre a Gameplay</Gameplay>
       <VideoContainer>
-        
         <iframe
           src={`https://www.youtube.com/embed/${game.video_id}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -171,17 +185,14 @@ const GamePage = () => {
         <p>{game.gameplay}</p>
       </VideoContainer>
 
-
-
       <CuriositiesContainer>
         <h2>Curiosidades do Jogo</h2>
         <ol>
-            {game.curiosities.map((curiosity, index) => (
-                <li key={index}>{curiosity}</li>
-            ))}
+          {game.curiosities.map((curiosity, index) => (
+            <li key={index}>{curiosity}</li>
+          ))}
         </ol>
       </CuriositiesContainer>
-
     </PageContainer>
   );
 };
