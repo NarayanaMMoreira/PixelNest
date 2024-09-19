@@ -33,6 +33,7 @@ const Title = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 2.3rem; 
+    width: 90%;
   }
 
 `;
