@@ -1,93 +1,92 @@
 [
-      {
-        "id": 1,
-        "id_nome": "overcooked",
-        "title": "Overcooked!",
-        "catchphrase": "É um pesadelo, na cozinha!",
-        "summary": "Overcooked foi criado pelo estúdio britânico Ghost Town Games, fundado por dois ex-desenvolvedores da Frontier Developments, Phil Duncan e Oli De-Vine. Eles queriam criar um jogo focado na cooperação e que incentivasse a comunicação entre os jogadores, levando à criação de um simulador de cozinha caótico. Lançado em 2016, Overcooked conquistou sucesso rapidamente por sua jogabilidade frenética e cooperativa, onde os jogadores atuam como chefs em cozinhas com desafios imprevisíveis. A sequência, Overcooked 2, foi lançada em 2018, adicionando novos recursos, como jogabilidade online, novos ambientes e desafios mais dinâmicos. A série, publicada pela Team17, é conhecida por seu foco em trabalho em equipe e diversão multiplayer.",
-        "release_year": "2016",
-        "gameplay": "A gameplay de Overcooked é focada na cooperação e no trabalho em equipe. Os jogadores, controlando chefs, devem se organizar para cortar, cozinhar, montar pratos e servir os pedidos dentro de um tempo limitado. Conforme as fases avançam, as cozinhas se tornam mais desafiadoras, com obstáculos como plataformas móveis, esteiras rolantes e incêndios. A comunicação entre os jogadores é crucial, já que cada um precisa coordenar suas ações para evitar atrasos e completar os pedidos com eficiência. O caos na cozinha é inevitável, mas o objetivo é sempre manter a calma e entregar o máximo de pratos possível.",
-        "curiosities": [
-          "Criação por uma Pequena Equipe: Overcooked foi desenvolvido por apenas dois criadores, Phil Duncan e Oli De-Vine, que queriam um jogo que incentivasse a comunicação entre amigos. A simplicidade da ideia, aliada à jogabilidade caótica, foi o que o tornou um sucesso instantâneo.",
-          "Um Jogo de Culinária Sem Receitas Reais: Embora Overcooked seja um jogo de cozinha, nenhuma das receitas é detalhada ou segue ingredientes reais. O foco está mais na cooperação entre os jogadores do que na precisão culinária.",
-          "Jogo Aclamado pela Crítica: Overcooked recebeu diversos prêmios, incluindo o BAFTA Games Award por Melhor Jogo Familiar, e foi elogiado por sua mecânica simples e acessível, que proporciona diversão para jogadores de todas as idades."
-        ],
-        "video_id": "Ob6VIECzAFk"
-      },
-      {
-        "id": 2,
-        "id_nome": "mariokart",
-        "title": "Mario Kart",
-        "catchphrase": "Aqui, a vitória pode virar o jogo a qualquer momento!",
-        "summary": "Mario Kart é uma das franquias de corrida mais amadas, onde personagens icônicos do universo Mario competem em pistas malucas, usando itens especiais para ganhar vantagem sobre os adversários.",
-        "release_year": "1992",
-        "gameplay": "Em Mario Kart, os jogadores correm em pistas repletas de curvas, rampas e perigos, enquanto coletam itens como cascos de tartaruga e bananas para atrapalhar seus oponentes. O jogo é conhecido por seu multiplayer competitivo e sua acessibilidade para jogadores de todas as idades.",
-        "curiosities": [
-          "A ideia original era criar um jogo de corrida com personagens da Nintendo, mas sem Mario; ele foi adicionado posteriormente.",
-          "O famoso item 'Casco Azul' foi introduzido em Mario Kart 64 para equilibrar o jogo, dando aos jogadores em último lugar uma chance de vencer.",
-          "Mario Kart 8 Deluxe é o jogo de corrida mais vendido da história."
-        ],
-        "video_id": "qktchbR-EX4"
-      },
-      {
-        "id": 3,
-        "id_nome": "mortalkombat",
-        "title": "Mortal Kombat",
-        "catchphrase": "Finish him!",
-        "summary": "Mortal Kombat é uma icônica franquia de jogos de luta conhecida por suas batalhas sangrentas e movimentos finais brutais, os 'Fatalities'.",
-        "release_year": "1992",
-        "gameplay": "Mortal Kombat é um jogo de luta onde os jogadores escolhem personagens com habilidades únicas para competir em duelos intensos. A mecânica de combate é focada em combos, ataques especiais e a execução dos famosos 'Fatalities', movimentos finais que derrotam os oponentes de maneira espetacular.",
-        "curiosities": [
-          "Mortal Kombat foi um dos principais jogos a motivar a criação da ESRB, o órgão de classificação indicativa de jogos.",
-          "O movimento 'Fatality' tornou-se um dos elementos mais famosos da cultura dos games.",
-          "O jogo original foi criado em apenas 10 meses."
-        ],
-        "video_id": "86D2q2Uvg9M"
-      },
-      {
-        "id": 4,
-        "id_nome": "thesims",
-        "title": "The Sims 4",
-        "catchphrase": "Viva suas melhores vidas virtuais!",
-        "summary": "The Sims 4 é um simulador de vida que permite aos jogadores criar e controlar pessoas virtuais, conhecidas como Sims, enquanto vivem suas vidas cotidianas.",
-        "release_year": "2014",
-        "gameplay": "No The Sims 4, os jogadores constroem casas, desenvolvem relacionamentos e guiam seus Sims em suas vidas diárias. O jogo oferece uma ampla gama de personalização, desde aparência e traços de personalidade até as carreiras e aspirações dos Sims.",
-        "curiosities": [
-          "The Sims é a franquia de simulador de vida mais vendida de todos os tempos.",
-          "O jogo é conhecido por sua comunidade ativa de modders, que criam conteúdos personalizados.",
-          "Foi o primeiro jogo da franquia a permitir que Sims tivessem emoções complexas, influenciando suas ações e interações."
-        ],
-        "video_id": "Ob6VIECzAFk"
-      },
-      {
-        "id": 5,
-        "id_nome": "zelda",
-        "title": "The Legend of Zelda",
-        "catchphrase": "É perigoso ir sozinho! Pegue isto.",
-        "summary": "The Legend of Zelda é uma das franquias de aventura mais icônicas, onde o jogador controla Link em sua jornada para salvar o reino de Hyrule e a princesa Zelda das forças do mal.",
-        "release_year": "1986",
-        "gameplay": "Em The Legend of Zelda, os jogadores exploram vastos mundos abertos, resolvem quebra-cabeças e enfrentam inimigos poderosos. O jogo combina ação em tempo real com exploração e narrativa profunda, cativando gerações de jogadores.",
-        "curiosities": [
-          "Foi um dos primeiros jogos a permitir salvar o progresso do jogador.",
-          "Shigeru Miyamoto, criador da série, se inspirou nas explorações de infância pelas florestas de Kyoto para criar o conceito do jogo.",
-          "Zelda foi nomeada após a esposa do famoso autor F. Scott Fitzgerald, Zelda Fitzgerald."
-        ],
-        "video_id": "Ob6VIECzAFk"
-      },
-      {
-        "id": 6,
-        "id_nome": "pacman",
-        "title": "Pac-Man",
-        "catchphrase": "Waka waka waka!",
-        "summary": "Pac-Man é um dos jogos de arcade mais icônicos de todos os tempos, onde o jogador controla Pac-Man enquanto ele navega por labirintos, comendo pastilhas e fugindo dos fantasmas.",
-        "release_year": "1980",
-        "gameplay": "Em Pac-Man, o objetivo é guiar o personagem por um labirinto, comendo todas as pastilhas enquanto evita os quatro fantasmas que tentam capturá-lo. O jogo é simples, mas oferece uma jogabilidade viciante e estratégia para evitar os inimigos e maximizar a pontuação.",
-        "curiosities": [
-          "O formato do Pac-Man foi inspirado em uma pizza com uma fatia faltando.",
-          "Pac-Man foi o primeiro videogame a introduzir personagens inimigos com IA diferenciada.",
-          "A palavra 'Pac-Man' vem da expressão japonesa 'paku-paku', que significa 'abrir e fechar a boca'."
-        ],
-        "video_id": "Ob6VIECzAFk"
-      }
-    ]
-  
+  {
+    "id": 1,
+    "id_nome": "overcooked",
+    "title": "Overcooked!",
+    "catchphrase": "É um pesadelo, na cozinha!",
+    "summary": "Overcooked! foi criado pelo estúdio britânico Ghost Town Games, fundado por Phil Duncan e Oli De-Vine, ex-desenvolvedores da Frontier Developments. Com o objetivo de criar uma experiência de jogo que incentivasse a cooperação e a comunicação entre os jogadores, Overcooked! apresenta um conceito simples, mas extremamente envolvente. Lançado em 2016, o jogo coloca os jogadores no papel de chefs em uma cozinha caótica, onde a colaboração é essencial para cumprir os pedidos e evitar o colapso total. A jogabilidade é marcada por uma série de desafios que vão desde cozinhas em plataformas móveis até ambientes com incêndios, exigindo uma coordenação meticulosa entre os jogadores. A popularidade do jogo levou ao lançamento de uma sequência, Overcooked! 2, em 2018, que adicionou novos recursos, como o jogo online e uma variedade de novos ambientes e desafios. A série, publicada pela Team17, é amplamente reconhecida por sua capacidade de criar momentos de caos e diversão em grupo, solidificando seu lugar como um dos melhores jogos cooperativos disponíveis.",
+    "release_year": "2016",
+    "gameplay": "Overcooked! é um jogo cooperativo onde os jogadores devem trabalhar juntos para preparar e servir pratos em uma cozinha frenética. A jogabilidade gira em torno da colaboração e da coordenação para cortar, cozinhar, montar e entregar pedidos dentro de um tempo limitado. As cozinhas variam em complexidade, apresentando obstáculos como plataformas móveis, esteiras rolantes e até mesmo desastres como incêndios. Cada jogador deve assumir um papel específico, seja cortando ingredientes, cozinhando ou limpando, e a comunicação eficaz é crucial para evitar atrasos e falhas. A mecânica de jogo é simples, mas a execução bem-sucedida exige estratégia e habilidades organizacionais. O caos resultante de tentar gerenciar múltiplas tarefas ao mesmo tempo faz com que cada sessão de jogo seja imprevisível e emocionante, tornando-o uma experiência de jogo única e divertida.",
+    "curiosities": [
+      "Criação por uma Pequena Equipe: Overcooked! foi desenvolvido por apenas dois criadores, Phil Duncan e Oli De-Vine. Eles buscaram criar um jogo que encorajasse a comunicação e a cooperação entre amigos, resultando em um jogo que, apesar de sua simplicidade, oferece uma profundidade de experiência cooperativa. A ideia simples, combinada com a jogabilidade caótica e divertida, fez com que o jogo se destacasse rapidamente no mercado.",
+      "Um Jogo de Culinária Sem Receitas Reais: Embora Overcooked! tenha como tema a cozinha, o jogo não segue receitas culinárias reais. Em vez disso, ele foca na dinâmica do trabalho em equipe e na capacidade de lidar com desafios imprevistos. O objetivo não é ensinar culinária real, mas criar uma experiência de jogo que seja envolvente e caótica.",
+      "Jogo Aclamado pela Crítica: Overcooked! foi amplamente elogiado por sua jogabilidade cooperativa e divertida. O jogo recebeu diversos prêmios, incluindo o BAFTA Games Award por Melhor Jogo Familiar. Sua recepção positiva foi atribuída à sua mecânica de jogo acessível e ao seu apelo universal, tornando-o um favorito em reuniões de amigos e familiares."
+    ],
+    "video_id": "Ob6VIECzAFk"
+  },
+  {
+    "id": 2,
+    "id_nome": "mariokart",
+    "title": "Mario Kart",
+    "catchphrase": "Aqui, a vitória pode virar o jogo a qualquer momento!",
+    "summary": "Mario Kart é uma das franquias de corrida mais icônicas e amadas da Nintendo, com seu primeiro título lançado em 1992. O jogo reúne personagens clássicos do universo Mario para competir em pistas coloridas e repletas de obstáculos. A jogabilidade de Mario Kart é marcada por sua combinação de corridas emocionantes e uso estratégico de itens especiais, como cascos de tartaruga e bananas, que podem alterar o curso da corrida de maneira imprevisível. A franquia é conhecida por seu multiplayer competitivo e acessível, permitindo que jogadores de todas as idades se divirtam, seja jogando localmente ou online. Mario Kart 8 Deluxe, a versão aprimorada de Mario Kart 8 lançada para o Nintendo Switch, é o jogo de corrida mais vendido de todos os tempos, solidificando a popularidade duradoura da série e sua influência na cultura dos jogos de corrida.",
+    "release_year": "1992",
+    "gameplay": "Mario Kart oferece uma experiência de corrida dinâmica e imprevisível, onde os jogadores competem em uma variedade de pistas temáticas, cada uma com seus próprios desafios e perigos. A mecânica central do jogo gira em torno do uso estratégico de itens para ganhar vantagem sobre os adversários e para se proteger de ataques. Os itens incluem cascos de tartaruga, que podem ser lançados para atingir outros corredores, e bananas, que criam obstáculos na pista. A jogabilidade é projetada para ser acessível, permitindo que jogadores de todos os níveis de habilidade se divirtam. A competição é acirrada e a natureza imprevisível dos itens garante que qualquer coisa possa acontecer durante a corrida, mantendo a emoção e o engajamento do jogador até o fim.",
+    "curiosities": [
+      "A ideia original de Mario Kart era criar um jogo de corrida com personagens da Nintendo, mas sem a presença de Mario. No entanto, a inclusão de Mario e outros personagens icônicos da Nintendo ajudou a aumentar o apelo do jogo e a criar um grande sucesso.",
+      "O famoso item 'Casco Azul' foi introduzido em Mario Kart 64 para equilibrar a competição, permitindo que jogadores que estão em último lugar tenham uma chance de alcançar os líderes. Esse item se tornou uma parte crucial da experiência de jogo e é amplamente reconhecido pelos fãs.",
+      "Mario Kart 8 Deluxe, uma versão aprimorada de Mario Kart 8, se tornou o jogo de corrida mais vendido de todos os tempos. A popularidade contínua da série demonstra a capacidade de Mario Kart de se adaptar e evoluir ao longo do tempo, mantendo seu status como um dos jogos de corrida mais amados."
+    ],
+    "video_id": "qktchbR-EX4"
+  },
+  {
+    "id": 3,
+    "id_nome": "mortalkombat",
+    "title": "Mortal Kombat",
+    "catchphrase": "Finish him!",
+    "summary": "Mortal Kombat é uma franquia de jogos de luta que começou em 1992 e rapidamente se tornou um fenômeno cultural devido às suas batalhas intensas e movimentos finais icônicos, conhecidos como 'Fatalities'. Desenvolvido pela Midway Games, Mortal Kombat se destacou por sua abordagem violenta e gráfica, apresentando um elenco diversificado de personagens com habilidades e movimentos especiais únicos. A série não só influenciou a forma como os jogos de luta são jogados, mas também desempenhou um papel significativo na criação da ESRB, a entidade que classifica os jogos. Ao longo dos anos, Mortal Kombat continuou a evoluir, com sequências que expandem a história e introduzem novas mecânicas de jogo, mantendo-se relevante no cenário dos jogos de luta.",
+    "release_year": "1992",
+    "gameplay": "A jogabilidade de Mortal Kombat é focada em combates um-a-um entre personagens, cada um com seus próprios conjuntos de movimentos e habilidades especiais. Os jogadores devem usar combos, ataques especiais e estratégias para vencer os oponentes em batalhas intensas. O jogo é famoso por seus 'Fatalities', movimentos finais elaborados e sangrentos que são realizados após a vitória no combate. Esses movimentos adicionam uma camada de dramatização e espetáculo à experiência de jogo, permitindo que os jogadores mostrem habilidades e criatividade no final das batalhas. A série é conhecida por sua profundidade de combate e pela maneira como combina elementos gráficos e mecânicas de jogo para criar uma experiência intensa e envolvente.",
+    "curiosities": [
+      "Mortal Kombat foi um dos principais responsáveis pela criação da ESRB, a entidade que classifica os jogos, devido às suas representações gráficas de violência. O impacto do jogo levou à necessidade de um sistema de classificação para ajudar os consumidores a entender o conteúdo dos jogos.",
+      "Os 'Fatalities' são um dos elementos mais memoráveis da série Mortal Kombat. Esses movimentos finais, que variam de elaborados a grotescos, são uma forma de encerrar os combates de maneira dramática e impactante. Eles se tornaram um dos principais atrativos da franquia e um símbolo de sua identidade.",
+      "O desenvolvimento do jogo original foi feito em apenas 10 meses com uma equipe pequena e um orçamento limitado. Apesar dessas restrições, Mortal Kombat rapidamente se tornou um sucesso devido à sua inovação em termos de violência gráfica e jogabilidade, estabelecendo um novo padrão para jogos de luta."
+    ],
+    "video_id": "86D2q2Uvg9M"
+  },
+  {
+    "id": 4,
+    "id_nome": "thesims",
+    "title": "The Sims 4",
+    "catchphrase": "Viva suas melhores vidas virtuais!",
+    "summary": "The Sims 4, lançado em 2014, é um simulador de vida desenvolvido pela Maxis e publicado pela Electronic Arts. A série The Sims, que começou em 2000, é conhecida por permitir aos jogadores criar e controlar a vida de personagens virtuais em um ambiente aberto e expansivo. Em The Sims 4, os jogadores podem criar e personalizar seus Sims e suas casas, construir relacionamentos e experimentar uma ampla gama de atividades e carreiras. O jogo se destaca por sua liberdade de escolha e pela capacidade de simular aspectos da vida real com um toque de criatividade. Com atualizações constantes e pacotes de expansão, The Sims 4 continua a expandir seu mundo e oferecer novas maneiras de interagir com seus personagens e seu ambiente virtual.",
+    "release_year": "2014",
+    "gameplay": "The Sims 4 oferece uma experiência de simulação de vida detalhada, permitindo aos jogadores criar e controlar Sims em um ambiente aberto. Os jogadores podem personalizar a aparência dos Sims, projetar e decorar suas casas e guiá-los em suas vidas diárias, incluindo carreiras, relacionamentos e atividades recreativas. O jogo é conhecido por sua ampla gama de opções de personalização e pela profundidade das interações sociais entre os personagens. Os jogadores podem explorar diferentes aspectos da vida, como amizades, famílias e carreiras, e experimentar uma variedade de cenários e situações. A capacidade de moldar a vida dos Sims de acordo com a criatividade e preferências do jogador é o que torna a experiência de jogo única e envolvente.",
+    "curiosities": [
+      "The Sims 4 introduziu um sistema de emoções aprimorado, permitindo que os Sims experimentem e expressem uma ampla gama de sentimentos. Esse sistema adiciona uma nova camada de profundidade ao jogo, influenciando como os Sims interagem e respondem a diferentes situações.",
+      "O criador original da série, Will Wright, se inspirou em seus próprios interesses em simulação e design urbano para criar The Sims. A ideia de criar uma simulação da vida cotidiana surgiu de seu desejo de explorar como as pessoas interagem e tomam decisões em um ambiente controlado.",
+      "The Sims 4 recebeu diversas atualizações e pacotes de expansão ao longo dos anos, cada um adicionando novas funcionalidades e elementos ao jogo. Essa abordagem contínua de expansão e atualização ajudou a manter o jogo fresco e relevante, proporcionando novas experiências e possibilidades aos jogadores."
+    ],
+    "video_id": "2BUHtqroKRw"
+  },
+  {
+    "id": 5,
+    "id_nome": "legendofzelda",
+    "title": "The Legend of Zelda",
+    "catchphrase": "É perigoso ir sozinho! Pegue isso.",
+    "summary": "The Legend of Zelda é uma das franquias mais influentes e amadas no gênero de jogos de aventura. Lançado pela primeira vez em 1986 pela Nintendo, o jogo segue as aventuras de Link, um herói em uma missão para resgatar a Princesa Zelda e derrotar as forças do mal. Com uma combinação de exploração, resolução de quebra-cabeças e combate em tempo real, o jogo oferece uma experiência rica e envolvente. A série é conhecida por sua narrativa profunda e seu mundo expansivo, que oferece aos jogadores a liberdade de explorar e descobrir segredos enquanto enfrentam inimigos e desafios. A inovação e a criatividade da franquia ajudaram a definir o gênero de aventura e inspiraram muitos outros jogos ao longo das décadas.",
+    "release_year": "1986",
+    "gameplay": "The Legend of Zelda é um jogo de aventura que combina exploração de vastos mundos abertos com a resolução de quebra-cabeças e combate contra inimigos poderosos. Os jogadores controlam Link em sua jornada para derrotar vilões, explorar masmorras e resolver enigmas que desafiam a mente. A mecânica de jogo permite uma ampla variedade de abordagens para superar desafios, oferecendo liberdade aos jogadores para explorar e experimentar. A riqueza do mundo do jogo e a profundidade dos quebra-cabeças são fundamentais para criar uma experiência de aventura única e emocionante, onde cada descoberta e cada vitória contribuem para a construção da narrativa e do progresso.",
+    "curiosities": [
+      "The Legend of Zelda foi um dos primeiros jogos a permitir que os jogadores salvassem seu progresso, uma inovação significativa na época de seu lançamento. Esse recurso foi um grande avanço, permitindo aos jogadores continuar suas aventuras sem a necessidade de reiniciar o jogo.",
+      "O criador da série, Shigeru Miyamoto, se inspirou em suas explorações infantis nas florestas ao redor de Kyoto para criar o conceito de mundo aberto e exploração do jogo. Essa experiência pessoal ajudou a moldar o design do jogo e a criar um mundo que parecia vivo e interativo.",
+      "O nome 'Zelda' foi escolhido em homenagem à esposa do famoso autor F. Scott Fitzgerald, Zelda Fitzgerald. A escolha do nome trouxe uma camada de sofisticação e história ao título, refletindo a importância e a profundidade do jogo."
+    ],
+    "video_id": "Cl6Bc7nZps4"
+  },
+  {
+    "id": 6,
+    "id_nome": "pacman",
+    "title": "Pac-Man",
+    "catchphrase": "Waka waka waka!",
+    "summary": "Pac-Man é um dos jogos de arcade mais icônicos e influentes da história, lançado pela primeira vez em 1980 pela Namco. O jogo apresenta Pac-Man, um personagem amarelo em forma de pizza, que navega por labirintos enquanto come pastilhas e evita fantasmas que tentam capturá-lo. O design simples e a jogabilidade viciante tornaram Pac-Man um sucesso instantâneo e um clássico atemporal. Além de introduzir um dos primeiros personagens de videogame memoráveis, o jogo também foi pioneiro em apresentar inimigos com inteligência artificial diferenciada, criando uma experiência de jogo mais desafiadora e envolvente. Pac-Man não só deixou uma marca duradoura na cultura dos jogos de arcade, mas também inspirou uma série de spin-offs, produtos e uma série animada.",
+    "release_year": "1980",
+    "gameplay": "No Pac-Man, o objetivo é guiar o personagem pelo labirinto para comer todas as pastilhas enquanto evita os quatro fantasmas que o perseguem. A jogabilidade combina uma mecânica simples com a necessidade de estratégia, pois os jogadores devem planejar seus movimentos para evitar os fantasmas e maximizar a pontuação. Além das pastilhas, o labirinto contém pastilhas de poder que permitem que Pac-Man coma os fantasmas por um curto período, transformando a dinâmica do jogo. O design do labirinto e a mecânica de jogo recompensam a habilidade e a estratégia dos jogadores, tornando cada partida uma experiência única e desafiadora.",
+    "curiosities": [
+      "O design do Pac-Man foi inspirado em uma pizza com uma fatia faltando, resultando no formato icônico do personagem. Este design simples, mas memorável, ajudou a criar um dos personagens mais reconhecíveis da história dos videogames.",
+      "Pac-Man foi o primeiro videogame a apresentar personagens inimigos com inteligência artificial diferenciada, criando uma experiência de jogo mais dinâmica e desafiadora. Cada fantasma tem um comportamento específico e suas próprias estratégias para capturar Pac-Man, adicionando profundidade ao jogo.",
+      "O nome 'Pac-Man' deriva da expressão japonesa 'paku-paku', que descreve a ação de abrir e fechar a boca, refletindo a maneira como o personagem come as pastilhas no jogo. Esse nome também ajudou a criar uma identidade única para o jogo, tornando-o facilmente reconhecível."
+    ],
+    "video_id": "dScq4P5gn4A"
+  }
+]

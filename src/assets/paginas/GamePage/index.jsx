@@ -12,6 +12,7 @@ const Banner = styled.div`
   width: 100%;
   height: 50vh; 
   background-image: url(${(props) => props.background});
+  background-color: var(--primary-color);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -48,16 +49,20 @@ const ImagesContainer = styled.div`
   margin-bottom: 30px;
 
   img {
-    width: 150px;
+    width: 250px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     img {
-      width: 100%;
+        width: 35%;
+        margin: 0 !important;
     }
   }
 `;
@@ -161,10 +166,10 @@ const GamePage = () => {
       </Banner>
 
       <ImagesContainer>
-        <img src={game.img_1} alt="Imagem 1" />
-        <img src={game.img_2} alt="Imagem 2" />
-        <img src={game.img_3} alt="Imagem 3" />
-        <img src={game.img_4} alt="Imagem 4" />
+        <img src={`/games/${game.id}/img1.png`} alt="Imagem 1" style={{ marginBottom: "50px" }}/>
+        <img src={`/games/${game.id}/img2.png`} alt="Imagem 2" style={{ marginTop: "50px" }}/>
+        <img src={`/games/${game.id}/img3.png`} alt="Imagem 3" style={{ marginBottom: "50px" }}/>
+        <img src={`/games/${game.id}/img4.png`} alt="Imagem 4" style={{ marginTop: "50px" }}/>
       </ImagesContainer>
 
       <Summary>{game.summary}</Summary>
