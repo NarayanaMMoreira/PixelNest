@@ -24,7 +24,7 @@ const Banner = styled.div`
   margin: 60px 0;
 
   @media (max-width: 768px) {
-    height: 40vh; 
+    height: 50vh; 
   }
 `;
 
@@ -35,7 +35,7 @@ const Title = styled.h1`
   width: 70%;
 
   @media (max-width: 768px) {
-    font-size: 2.3rem; 
+    font-size: 1.8rem; 
     width: 90%;
   }
 `;
@@ -45,11 +45,19 @@ const Resumo = styled.p`
   color: #fff;
   width: 60%;
   font-size: 1.1rem;
+  @media (max-width: 768px) {
+    font-size: 0.8rem; 
+    width: 85%;
+  }
 `;
 
 const Data = styled.p`
   color: #ffffff;
   font-size: 0.8rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem; 
+  }
 `;
 
 const Paragrafo = styled.div`
@@ -79,7 +87,7 @@ const Titulo = styled.div`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 `;
 
