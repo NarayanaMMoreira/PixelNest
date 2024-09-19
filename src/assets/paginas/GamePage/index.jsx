@@ -21,7 +21,7 @@ const Banner = styled.div`
   margin: 60px 0;
 
   @media (max-width: 768px) {
-    height: 30vh;  /* Altura ajustada para telas menores */
+    height: 30vh; 
   }
 `;
 
@@ -30,30 +30,15 @@ const Title = styled.h1`
   margin: 30px 0 0 0;
   font-size: 5rem;
 
-  @media (max-width: 1024px) {
-    font-size: 4rem; /* Para tablets ou telas intermediárias */
-  }
-
   @media (max-width: 768px) {
-    font-size: 3rem; /* Tamanho de fonte ajustado para telas menores */
+    font-size: 3rem; 
   }
 
-  @media (max-width: 480px) {
-    font-size: 2.5rem; /* Para dispositivos muito pequenos */
-  }
 `;
 
 const Catchphrase = styled.p`
   color: #fff;
   font-size: 1.5rem;
-
-  @media (max-width: 768px) {
-    font-size: 1.1rem; /* Ajuste para telas menores */
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1rem; /* Tamanho ajustado para dispositivos pequenos */
-  }
 `;
 
 const ImagesContainer = styled.div`
@@ -90,6 +75,10 @@ const Summary = styled.p`
 const Gameplay = styled.h2`
   align-items: center;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem; 
+  }
 `;
 
 const VideoContainer = styled.div`
@@ -147,6 +136,12 @@ const CuriositiesContainer = styled.div`
 
   li {
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+        font-size: 2.5rem;
+    }; 
   }
 `;
 
