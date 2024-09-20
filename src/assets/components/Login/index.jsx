@@ -40,7 +40,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://auth-login-api-v3kt.onrender.com/', {
+      const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/login', {
         emailOrUsername,
         password,
       });
