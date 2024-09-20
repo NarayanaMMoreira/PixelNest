@@ -5,7 +5,7 @@ import { FaUser } from 'react-icons/fa'; // Ícone do usuário
 
 const NavbarContainer = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centro horizontal da navbar */
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--primary-color);
@@ -16,6 +16,14 @@ const NavbarContainer = styled.nav`
   left: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`;
+
+const NavbarWrapper = styled.div`
+  display: flex;
+  justify-content: space-between; /* Espalha os itens à esquerda e à direita */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Para limitar a largura máxima */
 `;
 
 const Logo = styled.div`
@@ -31,7 +39,8 @@ const NavLinks = styled.ul`
   display: flex;
   gap: 2rem;
   margin: 0;
-  justify-content: center;
+  padding: 0;
+  align-items: center;
 
   @media (max-width: 768px) {
     position: absolute;
@@ -53,17 +62,19 @@ const NavLinks = styled.ul`
 `;
 
 const NavItem = styled.li`
-  display: flex;
   margin: 0;
+  display: flex;
+  align-items: center;
 `;
 
 const NavLink = styled(Link)`
-  display: flex;
   color: #ffffff;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s ease;
   font-weight: 600;
+  display: flex;
+  align-items: center;
 
   &:hover {
     color: var(--secondary-color);
@@ -72,7 +83,8 @@ const NavLink = styled(Link)`
 
 const Button = styled(Link)`
   display: flex;
-  padding: 0.2rem 1rem;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
   background-color: #ffffff;
   border-radius: 20px;
   color: var(--primary-color) !important;
@@ -87,6 +99,7 @@ const Button = styled(Link)`
 
 const UserIcon = styled(Link)`
   display: flex;
+  align-items: center;
   color: #ffffff;
   font-size: 1.5rem;
 
@@ -138,35 +151,37 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <Logo>
-        <h1>PixelNest</h1>
-      </Logo>
-      <NavLinks className={isOpen ? 'open' : ''}>
-        <NavItem><NavLink to="/">Home</NavLink></NavItem>
-        <NavItem><NavLink to="/galeria">Galeria</NavLink></NavItem>
-        <NavItem><NavLink to="/educa-mais">Educa+</NavLink></NavItem>
-        {isLoggedIn ? (
-          <>
+      <NavbarWrapper>
+        <Logo>
+          <h1>PixelNest</h1>
+        </Logo>
+        <NavLinks className={isOpen ? 'open' : ''}>
+          <NavItem><NavLink to="/">Home</NavLink></NavItem>
+          <NavItem><NavLink to="/galeria">Galeria</NavLink></NavItem>
+          <NavItem><NavLink to="/educa-mais">Educa+</NavLink></NavItem>
+          {isLoggedIn ? (
+            <>
+              <NavItem>
+                <UserIcon to="/user/profile">
+                  <FaUser /> {/* Ícone do usuário */}
+                </UserIcon>
+              </NavItem>
+              <NavItem>
+                <Button as="button" onClick={handleLogout}>Sair</Button>
+              </NavItem>
+            </>
+          ) : (
             <NavItem>
-              <UserIcon to="/user/profile">
-                <FaUser /> {/* Ícone do usuário */}
-              </UserIcon>
+              <Button to="/login">Fazer Login</Button>
             </NavItem>
-            <NavItem>
-              <Button as="button" onClick={handleLogout}>Sair</Button>
-            </NavItem>
-          </>
-        ) : (
-          <NavItem>
-            <Button to="/login">Fazer Login</Button>
-          </NavItem>
-        )}
-      </NavLinks>
-      <Hamburger onClick={toggleMenu}>
-        <Bar />
-        <Bar />
-        <Bar />
-      </Hamburger>
+          )}
+        </NavLinks>
+        <Hamburger onClick={toggleMenu}>
+          <Bar />
+          <Bar />
+          <Bar />
+        </Hamburger>
+      </NavbarWrapper>
     </NavbarContainer>
   );
 };
