@@ -65,6 +65,7 @@ const Formulario = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     margin-bottom: 30px;
+    height: 80vh;
   }
 `;
 
