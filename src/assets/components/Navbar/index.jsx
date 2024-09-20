@@ -31,6 +31,7 @@ const NavLinks = styled.ul`
   display: flex;
   gap: 2rem;
   margin: 0;
+  justify-content: center;
 
   @media (max-width: 768px) {
     position: absolute;
