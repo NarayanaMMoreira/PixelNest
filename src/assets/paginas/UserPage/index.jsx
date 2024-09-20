@@ -109,6 +109,9 @@ const Button = styled.button`
   }
 `;
 
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 const UserProfile = () => {
   const [userData, setUserData] = useState({
     name: '',
@@ -119,59 +122,66 @@ const UserProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [message, setMessage] = useState('');
 
+  // Função para buscar dados do usuário autenticado
   useEffect(() => {
-  const fetchUserData = async () => {
+    const fetchUserData = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          setMessage('Token não encontrado.');
+          return;
+        }
+
+        const response = await axios.get('https://auth-login-api-v3kt.onrender.com/user', {
+          headers: {
+            Authorization: Bearer ${token},
+          },
+        });
+
+        // Atualize os dados do usuário retornados pela API
+        setUserData(response.data.user); // Certifique-se de acessar a propriedade correta
+
+      } catch (error) {
+        console.error('Erro ao buscar dados do usuário:', error);
+        setMessage('Erro ao buscar dados do usuário.');
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
+  // Função para atualizar os campos do formulário
+  const handleChange = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
+
+  // Função para submeter as mudanças no perfil do usuário
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!isEditing) return;
+
     try {
       const token = localStorage.getItem('token');
       if (!token) {
-        setMessage('Token não encontrado.'); // Mensagem de erro se o token estiver ausente
+        setMessage('Token não encontrado.');
         return;
       }
 
-      const response = await axios.get('https://auth-login-api-v3kt.onrender.com/user/profile', {
+      const response = await axios.put('https://auth-login-api-v3kt.onrender.com/user', userData, {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: Bearer ${token},
         },
       });
-      setUserData(response.data); // Atualiza os dados do usuário
+
+      setMessage(response.data.msg); // Mostra a mensagem de sucesso
+      setIsEditing(false); // Sai do modo de edição
+
     } catch (error) {
-      console.error('Erro ao buscar dados do usuário:', error);
-      setMessage('Erro ao buscar dados do usuário.');
+      console.error('Erro ao atualizar dados do usuário:', error);
+      setMessage('Erro ao atualizar dados do usuário.');
     }
   };
-
-  fetchUserData();
-}, []);
-
-const handleChange = (e) => {
-  setUserData({ ...userData, [e.target.name]: e.target.value });
-};
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  if (!isEditing) return; // Impede a submissão se não estiver no modo de edição
-
-  try {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      setMessage('Token não encontrado.'); // Verifica se o token está presente antes de enviar a requisição
-      return;
-    }
-
-    const response = await axios.put('https://auth-login-api-v3kt.onrender.com/user/profile', userData, {
-      headers: {
-        Authorization: `Bearer ${token}`, // Envia o token no cabeçalho
-      },
-    });
-    
-    setMessage(response.data.msg); // Mostra a mensagem de sucesso da API
-    setIsEditing(false); // Sai do modo de edição
-  } catch (error) {
-    console.error('Erro ao atualizar dados do usuário:', error);
-    setMessage('Erro ao atualizar dados do usuário.');
-  }
-};
 
   return (
     <ProfileWrapper>
