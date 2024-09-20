@@ -15,7 +15,7 @@ const BannerContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-    padding: 1rem;
+    justify-content: center;
     height: 85vh;
 
     img {
