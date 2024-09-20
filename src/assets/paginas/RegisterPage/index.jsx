@@ -63,7 +63,7 @@ const RequirementsText = styled.p`
   color: #666;
 `;
 
-const Signup = () => {
+const RegisterPage = () => {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -192,4 +192,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default RegisterPage;
