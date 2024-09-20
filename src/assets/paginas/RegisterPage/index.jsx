@@ -10,38 +10,77 @@ const SignupWrapper = styled.div`
   background-color: #f0f0f0;
   padding: 20px;
   width: 100%;
+  
+  @media (max-width: 768px) {
+    margin-top: 40px;
+    padding: 10px;
+  }
 `;
 
 const FormContainer = styled.div`
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   background: white;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    box-shadow: none;
+  }
 `;
 
 const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 15px;
+  }
 `;
 
 const Label = styled.label`
   margin-bottom: 5px;
   font-weight: bold;
+  color: #333;
 `;
 
 const Input = styled.input`
   padding: 10px;
   border: 1px solid var(--primary-color);
   border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+
+  &:focus {
+    border-color: var(--tertiary-color);
+    box-shadow: 0 0 5px var(--tertiary-color);
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px;
+  }
 `;
 
 const Select = styled.select`
   padding: 10px;
   border: 1px solid var(--primary-color);
   border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+
+  &:focus {
+    border-color: var(--tertiary-color);
+    box-shadow: 0 0 5px var(--tertiary-color);
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px;
+  }
 `;
 
 const Button = styled.button`
@@ -52,16 +91,34 @@ const Button = styled.button`
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 
-  &:hover {
+  &:hover, &:focus {
     background-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-color);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    font-size: 14px;
   }
 `;
 
 const RequirementsText = styled.p`
   font-size: 12px;
   color: #666;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
 `;
+
 
 const RegisterPage = () => {
   const [name, setName] = useState('');
