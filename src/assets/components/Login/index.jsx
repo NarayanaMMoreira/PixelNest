@@ -120,20 +120,26 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    console.log('Dados do formulário:', { emailOrUsername, password });
+  
     try {
       const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/login', {
         emailOrUsername,
         password,
       });
+      console.log('Resposta da API:', response.data);
       setMessage(response.data.msg);
     } catch (error) {
-      if (error.response && error.response.data) {
+      console.error('Erro:', error);
+      if (error.response) {
+        console.log('Dados de erro da API:', error.response.data);
         setMessage(error.response.data.msg);
       } else {
         setMessage('Erro ao fazer login');
       }
     }
   };
+  
 
   return (
     <LoginWrapper>
