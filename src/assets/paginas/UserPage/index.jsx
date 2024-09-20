@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import { FaUser, FaEnvelope, FaBirthdayCake, FaVenusMars } from 'react-icons/fa'; // Ícones para o perfil
-import { useNavigate } from 'react-router-dom';
 
 // Estilos
 const ProfileWrapper = styled.div`
@@ -80,6 +79,10 @@ const Input = styled.input`
   width: 300px;
   border: 1px solid var(--primary-color);
   border-radius: 10px;
+  ${({ readOnly }) => readOnly && `
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+  `}
 `;
 
 const Icon = styled.div`
@@ -110,12 +113,11 @@ const UserProfile = () => {
   const [userData, setUserData] = useState({
     name: '',
     email: '',
-    birthDate: '',
+    birthdate: '',
     gender: '',
   });
+  const [isEditing, setIsEditing] = useState(false); // Estado para edição
   const [message, setMessage] = useState('');
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Função para buscar dados do usuário da API
@@ -137,23 +139,46 @@ const UserProfile = () => {
     fetchUserData();
   }, []);
 
+  const handleChange = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.put('https://auth-login-api-v3kt.onrender.com/user/profile', userData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      setMessage(response.data.msg);
+      setIsEditing(false); // Desativar o modo de edição após salvar
+    } catch (error) {
+      console.error('Erro ao atualizar dados do usuário:', error);
+      setMessage('Erro ao atualizar dados do usuário.');
+    }
+  };
+
   return (
     <ProfileWrapper>
       <Banner>
         <h2>Perfil do Usuário</h2>
-        <p>Aqui estão suas informações pessoais.</p>
+        <p>Aqui você pode visualizar e editar suas informações pessoais.</p>
         <img src="/images/pessoas.png" alt="Mulher e homem sentados" />
       </Banner>
 
       <ProfileDetails>
-        <h2>Seus Dados</h2>
-        <form>
+        <h2>{isEditing ? 'Editar Seus Dados' : 'Seus Dados'}</h2>
+        <form onSubmit={handleSubmit}>
           <InputWrapper>
             <Icon><FaUser /></Icon>
             <Input
               type="text"
+              name="name"
               value={userData.name}
-              readOnly
+              readOnly={!isEditing}
+              onChange={handleChange}
               placeholder="Nome"
             />
           </InputWrapper>
@@ -161,17 +186,21 @@ const UserProfile = () => {
             <Icon><FaEnvelope /></Icon>
             <Input
               type="email"
+              name="email"
               value={userData.email}
-              readOnly
+              readOnly={!isEditing}
+              onChange={handleChange}
               placeholder="Email"
             />
           </InputWrapper>
           <InputWrapper>
             <Icon><FaBirthdayCake /></Icon>
             <Input
-              type="text"
-              value={userData.birthDate}
-              readOnly
+              type="date"
+              name="birthdate"
+              value={userData.birthdate.split('T')[0]} // Formata a data
+              readOnly={!isEditing}
+              onChange={handleChange}
               placeholder="Data de Nascimento"
             />
           </InputWrapper>
@@ -179,12 +208,18 @@ const UserProfile = () => {
             <Icon><FaVenusMars /></Icon>
             <Input
               type="text"
+              name="gender"
               value={userData.gender}
-              readOnly
+              readOnly={!isEditing}
+              onChange={handleChange}
               placeholder="Gênero"
             />
           </InputWrapper>
-          <Button onClick={() => navigate('/editar-perfil')}>Editar Perfil</Button>
+          {isEditing ? (
+            <Button type="submit">Salvar</Button>
+          ) : (
+            <Button type="button" onClick={() => setIsEditing(true)}>Editar Perfil</Button>
+          )}
         </form>
         {message && <p>{message}</p>}
       </ProfileDetails>
