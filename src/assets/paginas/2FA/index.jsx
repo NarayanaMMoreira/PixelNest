@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaKey } from 'react-icons/fa'; // Ícone para 2FA
 import { useNavigate } from 'react-router-dom'; // Para navegação
+import axios from 'axios';
 
 const TwoFAWrapper = styled.div`
   display: flex;
@@ -123,15 +124,19 @@ const TwoFA = () => {
     e.preventDefault();
     console.log('Código 2FA:', code);
 
-    // Simulação de verificação do código 2FA
-    if (code === '123456') { // Substitua pela sua lógica de verificação
-      setMessage('Código verificado com sucesso!');
-      navigate('/home'); // Redireciona para a página inicial após sucesso
-    } else {
-      setMessage('Código inválido. Tente novamente.');
-    }
-  };
+    try {
+        const token = localStorage.getItem('token'); // Supondo que você armazene o token no localStorage
+        const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/verify-2fa', {
+            token,
+            twofaCode: code,
+        });
 
+        setMessage(response.data.msg); // Mensagem de sucesso
+        navigate('/home'); // Redireciona para a página inicial após sucesso
+    } catch (error) {
+        setMessage(error.response?.data?.msg || 'Erro ao verificar o código. Tente novamente.');
+    }
+};
   return (
     <TwoFAWrapper>
       <Banner>
@@ -147,7 +152,7 @@ const TwoFA = () => {
           <InputWrapper>
             <Icon><FaKey /></Icon>
             <Input
-              type="text"
+              type="number"
               placeholder="Código de Verificação"
               value={code}
               onChange={(e) => setCode(e.target.value)}
