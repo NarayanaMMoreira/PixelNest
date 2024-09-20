@@ -106,7 +106,7 @@ const RegisterPage = () => {
         birthdate: formattedBirthdate,
         gender,
         password,
-        confirmpassword
+        confirmPassword
       });
       if (error.response) {
         setMessage(error.response.data.msg);
