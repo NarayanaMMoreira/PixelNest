@@ -163,7 +163,6 @@ const RegisterPage = () => {
 
       // Exemplo de como salvar o token no localStorage
       if (jwtToken) {
-        localStorage.setItem('jwtToken', jwtToken);
         navigate('/2fa'); // Redireciona para a homepage
       }
     } catch (error) {
