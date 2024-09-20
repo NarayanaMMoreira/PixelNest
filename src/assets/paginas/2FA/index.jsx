@@ -119,6 +119,8 @@ const TwoFA = () => {
   const [code, setCode] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
+  const userId = localStorage.getItem('userId');
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -128,7 +130,9 @@ const TwoFA = () => {
       // Envia o token JWT no cabeçalho da requisição
       const response = await axios.post(
         'https://auth-login-api-v3kt.onrender.com/auth/verify-2fa',
-        { twofaCode: code }, // Envia apenas o código 2FA no corpo da requisição
+        { 
+          _id: userId,
+          twofaCode: code }, // Envia apenas o código 2FA no corpo da requisição
         {
           headers: {
             Authorization: `Bearer ${token}`, // Inclui o token no cabeçalho

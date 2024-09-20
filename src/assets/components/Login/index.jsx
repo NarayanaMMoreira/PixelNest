@@ -137,7 +137,8 @@ const Login = () => {
       const { token, msg } = response.data;
       
       // Armazenando o token no localStorage para uso posterior
-      localStorage.setItem('token', token);
+      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('userId', user._id);
       
       setMessage(msg);
       
