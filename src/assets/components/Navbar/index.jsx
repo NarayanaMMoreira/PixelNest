@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link, useNavigate } from 'react-router-dom';
-import { FaUser } from 'react-icons/fa'; // Ícone do usuário
+import { Link, useNavigate, useLocation } from 'react-router-dom'; // Adiciona useLocation para monitorar as rotas
+import { FaUser } from 'react-icons/fa';
 
 const NavbarContainer = styled.nav`
   display: flex;
-  justify-content: center; /* Centro horizontal da navbar */
+  justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--primary-color);
@@ -20,10 +20,10 @@ const NavbarContainer = styled.nav`
 
 const NavbarWrapper = styled.div`
   display: flex;
-  justify-content: space-between; /* Espalha os itens à esquerda e à direita */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px; /* Para limitar a largura máxima */
+  max-width: 1200px;
 `;
 
 const Logo = styled.div`
@@ -130,11 +130,19 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation(); // Para monitorar mudanças na rota
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    setIsLoggedIn(!!token); // Verifica se o token existe
+    setIsLoggedIn(!!token);
   }, []);
+
+  useEffect(() => {
+    // Fecha o menu quando a rota muda
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  }, [location.pathname]); // Executa sempre que a rota mudar
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -143,9 +151,15 @@ const Navbar = () => {
   const handleLogout = () => {
     const confirmLogout = window.confirm("Tem certeza que deseja sair?");
     if (confirmLogout) {
-      localStorage.removeItem('token'); // Remove o token
-      setIsLoggedIn(false); // Atualiza o estado
-      navigate('/'); // Redireciona para a página inicial ou outra
+      localStorage.removeItem('token');
+      setIsLoggedIn(false);
+      navigate('/');
+    }
+  };
+
+  const closeMenu = () => {
+    if (isOpen) {
+      setIsOpen(false); // Fecha o menu
     }
   };
 
@@ -156,23 +170,23 @@ const Navbar = () => {
           <h1>PixelNest</h1>
         </Logo>
         <NavLinks className={isOpen ? 'open' : ''}>
-          <NavItem><NavLink to="/">Home</NavLink></NavItem>
-          <NavItem><NavLink to="/galeria">Galeria</NavLink></NavItem>
-          <NavItem><NavLink to="/educa-mais">Educa+</NavLink></NavItem>
+          <NavItem><NavLink to="/" onClick={closeMenu}>Home</NavLink></NavItem>
+          <NavItem><NavLink to="/galeria" onClick={closeMenu}>Galeria</NavLink></NavItem>
+          <NavItem><NavLink to="/educa-mais" onClick={closeMenu}>Educa+</NavLink></NavItem>
           {isLoggedIn ? (
             <>
               <NavItem>
-                <UserIcon to="/user/profile">
-                  <FaUser /> {/* Ícone do usuário */}
+                <UserIcon to="/user/profile" onClick={closeMenu}>
+                  <FaUser />
                 </UserIcon>
               </NavItem>
               <NavItem>
-                <Button as="button" onClick={handleLogout}>Sair</Button>
+                <Button as="button" onClick={() => { handleLogout(); closeMenu(); }}>Sair</Button>
               </NavItem>
             </>
           ) : (
             <NavItem>
-              <Button to="/login">Fazer Login</Button>
+              <Button to="/login" onClick={closeMenu}>Fazer Login</Button>
             </NavItem>
           )}
         </NavLinks>
