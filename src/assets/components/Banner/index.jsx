@@ -14,9 +14,9 @@ const BannerContainer = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    padding: 8rem 2rem;
     text-align: center;
-    justify-content: center;
-    height: 85vh;
+    height: 60vh;
 
     img {
       display: none;
@@ -60,7 +60,7 @@ const TextBox = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 80%;
+    width: 100%;
 
     h1 {
       font-size: 3rem;
@@ -74,6 +74,7 @@ const TextBox = styled.div`
 
     p {
       font-size: 0.875rem;
+      width: 100%;
       margin: 0;
     }
   }
