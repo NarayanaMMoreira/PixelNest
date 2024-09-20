@@ -9,33 +9,29 @@ const GaleriaContainer = styled.div`
   margin-top: 60px;
 `;
 
-const InicioContainer = styled.div `
+const InicioContainer = styled.div`
   padding: 6rem;
   box-sizing: border-box;
   background-color: var(--primary-color);
 
   @media (max-width: 768px) {
-    padding: 2rem;
+    padding: 2.5rem;
   }
+`;
 
-`
 const Title = styled.h1`
   font-size: 32px;
   color: #ffffff;
   margin-bottom: 20px;
-  @media (max-width: 768px) {
-    width: 90%;
-  }
 `;
 
 const Subtitle = styled.p`
   font-size: 18px;
   color: #ffffff;
   margin-bottom: 20px;
-  @media (max-width: 768px) {
-    width: 80%;
-  }
+  font-style: italic;
 `;
+
 
 const SearchContainer = styled.div`
   display: flex;
