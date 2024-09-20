@@ -131,6 +131,8 @@ const RegisterPage = () => {
   const [message, setMessage] = useState('');
   const [token, setToken] = useState(null); // Estado para armazenar o token JWT
 
+  const navigate = useNavigate();
+
   const handleSignup = async (e) => {
     e.preventDefault();
 
@@ -162,6 +164,7 @@ const RegisterPage = () => {
       // Exemplo de como salvar o token no localStorage
       if (jwtToken) {
         localStorage.setItem('jwtToken', jwtToken);
+        navigate('/2fa'); // Redireciona para a homepage
       }
     } catch (error) {
       console.error('Erro:', error);

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import { FaUser, FaLock } from 'react-icons/fa'; // Importando os ícones
+import { useNavigate } from 'react-router-dom'; // Importando useNavigate
 
 const LoginWrapper = styled.div`
   display: flex;
@@ -70,9 +71,9 @@ const Formulario = styled.div`
 `;
 
 const InputWrapper = styled.div`
-display: flex;
-flex-direction: column;
-margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
   position: relative;
   width: 100%;
 `;
@@ -119,11 +120,11 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
+  const navigate = useNavigate(); // Hook para navegação
+
   const handleLogin = async (e) => {
     e.preventDefault();
     console.log('Dados do formulário:', { emailOrUsername, password });
-  
-    console.log('Tentando fazer login com:', { emailOrUsername, password });
 
     try {
       const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/login', {
@@ -131,7 +132,13 @@ const Login = () => {
         password,
       });
       console.log('Resposta da API:', response.data);
-      setMessage(response.data.msg);
+      const { msg, token } = response.data;
+
+      setMessage(msg);
+      if (token) {
+        localStorage.setItem('jwtToken', token); // Armazenando o token no localStorage
+        navigate('/2fa'); // Redireciona para a página de autenticação de dois fatores
+      }
     } catch (error) {
       console.error('Erro:', error);
       if (error.response) {
@@ -142,7 +149,6 @@ const Login = () => {
       }
     }
   };
-  
 
   return (
     <LoginWrapper>
@@ -179,7 +185,7 @@ const Login = () => {
           <Button type="submit">Entrar</Button>
         </form>
         {message && <p>{message}</p>}
-        <Link href="/cadastrar">Ainda não tenho cadastro</Link> {/* Adicionei a rota aqui */}
+        <Link href="/cadastrar">Ainda não tenho cadastro</Link>
       </Formulario>
     </LoginWrapper>
   );
