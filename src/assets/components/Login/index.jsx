@@ -47,6 +47,8 @@ const Banner = styled.div`
 const Formulario = styled.div`
   display: flex;
   width: 50%;
+  height: 100vh;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin: 0;
