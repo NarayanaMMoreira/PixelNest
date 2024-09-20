@@ -125,7 +125,6 @@ const TwoFA = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log('Dados do formulário:', { emailOrUsername, password });
     const token = localStorage.getItem('token'); // Obtém o token do localStorage
 
     try {
