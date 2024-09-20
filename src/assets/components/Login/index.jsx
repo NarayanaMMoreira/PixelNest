@@ -9,7 +9,6 @@ const LoginWrapper = styled.div`
   align-items: center;
   text-align: center;
   margin-top: 60px;
-  height: 100vh;
   background-color: #f0f0f0;
 
   @media (max-width: 768px) {
