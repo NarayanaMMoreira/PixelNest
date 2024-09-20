@@ -93,7 +93,7 @@ const RegisterPage = () => {
         birthdate: formattedBirthdate, // Agora corretamente formatada
         gender,
         password,
-        confirmpassword
+        confirmPassword 
       });
 
       setMessage(response.data.msg);
