@@ -32,7 +32,7 @@ const Image = styled.img`
   margin-right: 2rem;
 
   @media (max-width: 768px) {
-    margin-right: 0;
+    width: 70%
     margin-bottom: 1rem;
   }
 `;
@@ -48,6 +48,7 @@ const TextBox = styled.div`
 
   @media (max-width: 768px) {
     text-align: center;
+    width: 80%;
 
     p {
       font-size: 0.875rem;
@@ -68,6 +69,10 @@ const NavLink = styled(Link)`
 
   &:hover {
     background-color: var(--secondary-color);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
 
@@ -91,12 +96,24 @@ const InfoSection = styled.div`
     margin-bottom: 1.5rem;
     max-width: 700px;
   }
+
+  @media (max-width: 768px) {
+    h2 {
+      font size: 3rem;
+    }
+    p {
+      font-size: 1rem;
+    }
 `;
 
 const InfoImage = styled.img`
   max-width: 100%;
   height: auto;
   margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    width: 70%
+  }
 `;
 
 const Apresentacao = () => {
