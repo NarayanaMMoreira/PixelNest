@@ -70,7 +70,7 @@ const RegisterPage = () => {
   const [birthdate, setBirthdate] = useState('');
   const [gender, setGender] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [confirmpassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
   const [token, setToken] = useState(null); // Estado para armazenar o token JWT
 
@@ -78,7 +78,7 @@ const RegisterPage = () => {
     e.preventDefault();
 
     // Verifica se as senhas coincidem
-    if (password !== confirmPassword) {
+    if (password !== confirmpassword) {
       setMessage('As senhas não coincidem.');
       return;
     }
@@ -94,7 +94,7 @@ const RegisterPage = () => {
         birthdate: formattedBirthdate,
         gender,
         password,
-        confirmPassword,
+        confirmpassword,
       });
 
       const { msg, token: jwtToken } = response.data; // Recebe a mensagem e o token
@@ -115,7 +115,7 @@ const RegisterPage = () => {
         birthdate: formattedBirthdate,
         gender,
         password,
-        confirmPassword,
+        confirmpassword,
       });
       if (error.response) {
         setMessage(error.response.data.msg);
@@ -202,12 +202,12 @@ const RegisterPage = () => {
             </RequirementsText>
           </InputWrapper>
           <InputWrapper>
-            <Label htmlFor="confirmPassword">Confirme a Senha <span style={{ color: 'red' }}>*</span></Label>
+            <Label htmlFor="confirmpassword">Confirme a Senha <span style={{ color: 'red' }}>*</span></Label>
             <Input
-              id="confirmPassword"
+              id="confirmpassword"
               type="password"
               placeholder="Confirme a Senha"
-              value={confirmPassword}
+              value={confirmpassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
             />
