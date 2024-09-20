@@ -19,12 +19,18 @@ const Title = styled.h1`
   font-size: 32px;
   color: #ffffff;
   margin-bottom: 20px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Subtitle = styled.p`
   font-size: 18px;
   color: #ffffff;
   margin-bottom: 20px;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const SearchContainer = styled.div`
