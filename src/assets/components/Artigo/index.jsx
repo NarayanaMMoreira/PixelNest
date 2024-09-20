@@ -58,7 +58,7 @@ const Button = styled(Link)`
 const Artigo = ({ artigo }) => {
   return (
     <Card>
-      <ArtigoImage src={`/games/${artigo.id}/foto.png`} alt={artigo.title} />
+      <ArtigoImage src={`/artigo/${artigo.id}/foto.png`} alt={artigo.title} />
       <ArtigoTitle>{artigo.title}</ArtigoTitle>
       <Resumo><p>{artigo.resumo}</p></Resumo>
       <Button to={`/educa-mais/${artigo.id}`}>Descubra mais</Button>
