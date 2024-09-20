@@ -135,6 +135,8 @@ const RegisterPage = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
 
+    console.log('Dados do formulário:', { name, username, email, birthdate, gender, password, confirmpassword  });
+
     // Verifica se as senhas coincidem
     if (password !== confirmpassword) {
       setMessage('As senhas não coincidem.');
@@ -152,6 +154,7 @@ const RegisterPage = () => {
         birthdate: formattedBirthdate,
         gender,
         password,
+        confirmpassword
       });
 
       const { msg } = response.data; // Recebe a mensagem
