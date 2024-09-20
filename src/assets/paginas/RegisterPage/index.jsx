@@ -83,31 +83,22 @@ const RegisterPage = () => {
     }
 
     // Formata a data de nascimento no formato AAAA-MM-DD
-    const formattedBirthdate = birthdate.split('T')[0];
+    const formattedBirthdate = birthdate;
 
     try {
       const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/register', {
         name,
         username,
         email,
-        birthdate: formattedBirthdate, // Agora corretamente formatada
+        birthdate: formattedBirthdate,
         gender,
         password,
-        confirmPassword 
+        confirmPassword,
       });
 
       setMessage(response.data.msg);
     } catch (error) {
       console.error('Erro:', error);
-      console.error('Dados da requisição:', {
-        name,
-        username,
-        email,
-        birthdate: formattedBirthdate,
-        gender,
-        password,
-        confirmPassword
-      });
       if (error.response) {
         setMessage(error.response.data.msg);
       } else {
@@ -212,4 +203,3 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
-
