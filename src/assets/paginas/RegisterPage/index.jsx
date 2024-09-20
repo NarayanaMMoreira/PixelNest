@@ -80,13 +80,21 @@ const RegisterPage = () => {
         name,
         username,
         email,
-        birthdate: new Date(birthdate).toISOString(), // Converte a data para o formato ISO
+        birthdate: new Date(birthdate).toISOString(),
         gender,
         password,
       });
       setMessage(response.data.msg);
     } catch (error) {
       console.error('Erro:', error);
+      console.error('Dados da requisição:', {
+        name,
+        username,
+        email,
+        birthdate: new Date(birthdate).toISOString(),
+        gender,
+        password,
+      });
       if (error.response) {
         setMessage(error.response.data.msg);
       } else {
@@ -94,6 +102,7 @@ const RegisterPage = () => {
       }
     }
   };
+  
 
   return (
     <SignupWrapper>
