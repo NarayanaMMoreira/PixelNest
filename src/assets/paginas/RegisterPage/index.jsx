@@ -75,6 +75,13 @@ const RegisterPage = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault();
+    
+    // Verifica se as senhas coincidem
+    if (password !== confirmPassword) {
+      setMessage('As senhas não coincidem.');
+      return;
+    }
+
     try {
       const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/register', {
         name,
@@ -83,6 +90,7 @@ const RegisterPage = () => {
         birthdate: new Date(birthdate).toISOString(),
         gender,
         password,
+        confirmpassword: confirmPassword, // Inclui o campo confirmPassword
       });
       setMessage(response.data.msg);
     } catch (error) {
@@ -94,6 +102,7 @@ const RegisterPage = () => {
         birthdate: new Date(birthdate).toISOString(),
         gender,
         password,
+        confirmpassword: confirmPassword,
       });
       if (error.response) {
         setMessage(error.response.data.msg);
@@ -102,7 +111,6 @@ const RegisterPage = () => {
       }
     }
   };
-  
 
   return (
     <SignupWrapper>
