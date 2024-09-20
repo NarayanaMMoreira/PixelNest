@@ -14,6 +14,10 @@ const InicioContainer = styled.div `
   box-sizing: border-box;
   background-color: var(--primary-color);
 
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+
 `
 const Title = styled.h1`
   font-size: 32px;
