@@ -116,18 +116,16 @@ const UserProfile = () => {
     birthdate: '',
     gender: '',
   });
-  const [isEditing, setIsEditing] = useState(false); // Estado para edição
+  const [isEditing, setIsEditing] = useState(false);
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    // Função para buscar dados do usuário da API
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://auth-login-api-v3kt.onrender.com/user/profile', {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+        // Enviando o token no corpo da requisição
+        const response = await axios.post('https://auth-login-api-v3kt.onrender.com/user/profile', {
+          token: token,
         });
         setUserData(response.data);
       } catch (error) {
@@ -147,13 +145,13 @@ const UserProfile = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.put('https://auth-login-api-v3kt.onrender.com/user/profile', userData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+      // Enviando o token no corpo da requisição
+      const response = await axios.put('https://auth-login-api-v3kt.onrender.com/user/profile', {
+        token: token,
+        ...userData,
       });
       setMessage(response.data.msg);
-      setIsEditing(false); // Desativar o modo de edição após salvar
+      setIsEditing(false);
     } catch (error) {
       console.error('Erro ao atualizar dados do usuário:', error);
       setMessage('Erro ao atualizar dados do usuário.');
@@ -171,6 +169,7 @@ const UserProfile = () => {
       <ProfileDetails>
         <h2>{isEditing ? 'Editar Seus Dados' : 'Seus Dados'}</h2>
         <form onSubmit={handleSubmit}>
+          {/* Input Wrappers */}
           <InputWrapper>
             <Icon><FaUser /></Icon>
             <Input
@@ -198,7 +197,7 @@ const UserProfile = () => {
             <Input
               type="date"
               name="birthdate"
-              value={userData.birthdate.split('T')[0]} // Formata a data
+              value={userData.birthdate.split('T')[0]}
               readOnly={!isEditing}
               onChange={handleChange}
               placeholder="Data de Nascimento"
