@@ -131,8 +131,9 @@ const TwoFA = () => {
       const response = await axios.post(
         'https://auth-login-api-v3kt.onrender.com/auth/verify-2fa',
         { 
-          _id: `Bearer ${token}`,
-          twofaCode: code }, // Envia apenas o código 2FA no corpo da requisição
+          token: token, // Enviando o token diretamente
+          twofaCode: code 
+        }
       );
 
       setMessage(response.data.msg); 

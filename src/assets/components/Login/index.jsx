@@ -133,12 +133,11 @@ const Login = () => {
       });
       console.log('Resposta da API:', response.data);
       
-      // Extraindo o token da resposta
-      const { token, msg } = response.data;
+      const token = response.data.token;
+      const msg = response.data.msg;
       
       // Armazenando o token no localStorage para uso posterior
-      localStorage.setItem('token', response.data.token);
-      localStorage.setItem('userId', user._id);
+      localStorage.setItem('token', token);
       
       setMessage(msg);
       
