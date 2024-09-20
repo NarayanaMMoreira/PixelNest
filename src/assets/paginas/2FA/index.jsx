@@ -126,19 +126,17 @@ const TwoFA = () => {
 
     try {
       // Envia o token JWT no cabeçalho da requisição
-      const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/verify-2fa', {
-        twofaCode: code,
-      }, {
-        headers: {
-          Authorization: `Bearer ${token}` // Token JWT enviado no cabeçalho
+      const response = await axios.post(
+        'https://auth-login-api-v3kt.onrender.com/auth/verify-2fa',
+        { twofaCode: code }, // Envia apenas o código 2FA no corpo da requisição
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Inclui o token no cabeçalho
+          },
         }
-      });
+      );
 
-      setMessage(response.data.msg); // Mensagem de sucesso
-
-      // Armazena o token novamente se necessário (opcional, caso o token seja renovado)
-      localStorage.setItem('token', token);
-
+      setMessage(response.data.msg); 
       navigate('/home'); // Redireciona para a página inicial após sucesso
     } catch (error) {
       setMessage(error.response?.data?.msg || 'Erro ao verificar o código. Tente novamente.');

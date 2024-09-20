@@ -132,10 +132,17 @@ const Login = () => {
         password,
       });
       console.log('Resposta da API:', response.data);
-      const { msg } = response.data;
-
+      
+      // Extraindo o token da resposta
+      const { token, msg } = response.data;
+      
+      // Armazenando o token no localStorage para uso posterior
+      localStorage.setItem('token', token);
+      
       setMessage(msg);
-      navigate('/2fa'); // Redireciona para a página de autenticação de dois fatores
+      
+      // Redireciona para a página de autenticação de dois fatores
+      navigate('/2fa');
     } catch (error) {
       console.error('Erro:', error);
       if (error.response) {
