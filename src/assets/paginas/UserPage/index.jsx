@@ -144,6 +144,8 @@ const UserProfile = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isEditing) return; // Impede o envio se não estiver editando
+
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put('https://auth-login-api-v3kt.onrender.com/user/profile', userData, {
@@ -170,7 +172,6 @@ const UserProfile = () => {
       <ProfileDetails>
         <h2>{isEditing ? 'Editar Seus Dados' : 'Seus Dados'}</h2>
         <form onSubmit={handleSubmit}>
-          {/* Input Wrappers */}
           <InputWrapper>
             <Icon><FaUser /></Icon>
             <Input
@@ -228,3 +229,4 @@ const UserProfile = () => {
 };
 
 export default UserProfile;
+
