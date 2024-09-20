@@ -10,6 +10,7 @@ import Rodape from './assets/components/Rodape';
 import GamePage from './assets/paginas/GamePage';
 import ArtigoPage from './assets/paginas/ArtigoPage';
 import LoginPage from './assets/paginas/LoginPage';
+import RegisterPage from './assets/paginas/RegisterPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/educa-mais/:id" element={<ArtigoPage />} />
         <Route path="/galeria/:id" element={<GamePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/cadastrar" element={<RegisterPage />} />
         <Route path="*" element={<NotFound />} /> 
       </Routes>
       <Rodape />
