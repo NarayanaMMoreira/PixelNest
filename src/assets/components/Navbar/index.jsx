@@ -68,7 +68,7 @@ const NavLink = styled(Link)`
 `;
 
 const Button = styled(Link)`
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
   background-color: #ffffff;
   border-radius: 20px;
   color: var(--primary-color) !important;
@@ -83,6 +83,7 @@ const Button = styled(Link)`
 
 const UserIcon = styled(Link)`
   color: #ffffff;
+  padding: 0;
   font-size: 1.5rem;
 
   &:hover {
