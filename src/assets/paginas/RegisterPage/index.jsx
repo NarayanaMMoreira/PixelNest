@@ -92,7 +92,8 @@ const RegisterPage = () => {
         email,
         birthdate: formattedBirthdate, // Agora corretamente formatada
         gender,
-        password
+        password,
+        confirmpassword
       });
 
       setMessage(response.data.msg);
@@ -104,7 +105,8 @@ const RegisterPage = () => {
         email,
         birthdate: formattedBirthdate,
         gender,
-        password
+        password,
+        confirmpassword
       });
       if (error.response) {
         setMessage(error.response.data.msg);
@@ -210,3 +212,4 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+
