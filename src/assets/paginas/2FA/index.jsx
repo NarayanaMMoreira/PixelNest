@@ -125,15 +125,19 @@ const TwoFA = () => {
     const token = localStorage.getItem('token'); // Obtém o token do localStorage
 
     try {
+      // Envia o token JWT no cabeçalho da requisição
       const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/verify-2fa', {
-        token, // Enviando o token JWT
         twofaCode: code,
+      }, {
+        headers: {
+          Authorization: `Bearer ${token}` // Token JWT enviado no cabeçalho
+        }
       });
 
       setMessage(response.data.msg); // Mensagem de sucesso
 
-      // Aqui você pode iniciar a sessão, por exemplo, armazenando o token em localStorage
-      localStorage.setItem('token', token); // Armazena o token, se necessário
+      // Armazena o token novamente se necessário (opcional, caso o token seja renovado)
+      localStorage.setItem('token', token);
 
       navigate('/home'); // Redireciona para a página inicial após sucesso
     } catch (error) {

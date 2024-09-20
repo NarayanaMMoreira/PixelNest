@@ -161,8 +161,8 @@ const RegisterPage = () => {
 
       setMessage(msg);
 
-      // Redireciona para a página de 2FA
-      navigate('/2fa'); 
+      // Redireciona para a página de cadastro
+      navigate('/cadastro'); 
     } catch (error) {
       console.error('Erro:', error);
       if (error.response) {
