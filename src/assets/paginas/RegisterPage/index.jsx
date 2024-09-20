@@ -162,7 +162,7 @@ const RegisterPage = () => {
       setMessage(msg);
 
       // Redireciona para a página de cadastro
-      navigate('/cadastro'); 
+      navigate('/login'); 
     } catch (error) {
       console.error('Erro:', error);
       if (error.response) {
