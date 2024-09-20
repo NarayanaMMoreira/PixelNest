@@ -9,6 +9,7 @@ import GlobalStyle from './assets/components/EstilosGlobais'
 import Rodape from './assets/components/Rodape';
 import GamePage from './assets/paginas/GamePage';
 import ArtigoPage from './assets/paginas/ArtigoPage';
+import LoginPage from './assets/paginas/LoginPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/educa-mais" element={<EducaMais />} />
         <Route path="/educa-mais/:id" element={<ArtigoPage />} />
         <Route path="/galeria/:id" element={<GamePage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} /> 
       </Routes>
       <Rodape />
