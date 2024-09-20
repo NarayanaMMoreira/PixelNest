@@ -122,6 +122,8 @@ const Login = () => {
     e.preventDefault();
     console.log('Dados do formulário:', { emailOrUsername, password });
   
+    console.log('Tentando fazer login com:', { emailOrUsername, password });
+
     try {
       const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/login', {
         emailOrUsername,
