@@ -16,6 +16,7 @@ const BannerContainer = styled.div`
     flex-direction: column;
     text-align: center;
     padding: 1rem;
+    height: 70vh;
 
     img {
       display: none;
