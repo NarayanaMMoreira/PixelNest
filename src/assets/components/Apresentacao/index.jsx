@@ -32,8 +32,8 @@ const Image = styled.img`
   margin-right: 2rem;
 
   @media (max-width: 768px) {
-    width: 70%
-    margin-bottom: 1rem;
+    width: 50%
+    margin: 1rem auto;
   }
 `;
 
@@ -47,7 +47,7 @@ const TextBox = styled.div`
   }
 
   @media (max-width: 768px) {
-    text-align: center;
+    text-align: justify;
     width: 80%;
 
     p {
@@ -73,6 +73,7 @@ const NavLink = styled(Link)`
 
   @media (max-width: 768px) {
     font-size: 1rem;
+    padding: 8px 20px;
   }
 `;
 
@@ -99,9 +100,11 @@ const InfoSection = styled.div`
 
   @media (max-width: 768px) {
     h2 {
-      font size: 3rem;
+      font size: 3rem !important;
+      width: 90%
     }
     p {
+      width: 80%;
       font-size: 1rem;
     }
 `;
@@ -112,7 +115,7 @@ const InfoImage = styled.img`
   margin-top: 1rem;
 
   @media (max-width: 768px) {
-    width: 70%
+    width: 50%
   }
 `;
 
