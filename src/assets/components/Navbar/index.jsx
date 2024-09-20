@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa'; // Ícone do usuário
 
 const NavbarContainer = styled.nav`
@@ -111,6 +111,7 @@ const Bar = styled.span`
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -119,6 +120,15 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleLogout = () => {
+    const confirmLogout = window.confirm("Tem certeza que deseja sair?");
+    if (confirmLogout) {
+      localStorage.removeItem('token'); // Remove o token
+      setIsLoggedIn(false); // Atualiza o estado
+      navigate('/'); // Redireciona para a página inicial ou outra
+    }
   };
 
   return (
@@ -131,11 +141,16 @@ const Navbar = () => {
         <NavItem><NavLink to="/galeria">Galeria</NavLink></NavItem>
         <NavItem><NavLink to="/educa-mais">Educa+</NavLink></NavItem>
         {isLoggedIn ? (
-          <NavItem>
-            <UserIcon to="/user/profile">
-              <FaUser /> {/* Ícone do usuário */}
-            </UserIcon>
-          </NavItem>
+          <>
+            <NavItem>
+              <UserIcon to="/user/profile">
+                <FaUser /> {/* Ícone do usuário */}
+              </UserIcon>
+            </NavItem>
+            <NavItem>
+              <NavLink as="button" onClick={handleLogout}>Sair</NavLink>
+            </NavItem>
+          </>
         ) : (
           <NavItem>
             <LoginButton to="/login">Fazer Login</LoginButton>
