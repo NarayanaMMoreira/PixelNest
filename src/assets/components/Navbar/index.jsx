@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa'; // Ícone do usuário
 
 const NavbarContainer = styled.nav`
   display: flex;
@@ -62,7 +63,7 @@ const NavLink = styled(Link)`
   font-weight: 600;
 
   &:hover {
-    color: var( --secondary-color);
+    color: var(--secondary-color);
   }
 `;
 
@@ -77,6 +78,15 @@ const LoginButton = styled(Link)`
 
   &:hover {
     background-color: var(--secondary-color);
+  }
+`;
+
+const UserIcon = styled(Link)`
+  color: #ffffff;
+  font-size: 1.5rem;
+
+  &:hover {
+    color: var(--secondary-color);
   }
 `;
 
@@ -100,6 +110,12 @@ const Bar = styled.span`
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    setIsLoggedIn(!!token); // Verifica se o token existe
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -114,7 +130,17 @@ const Navbar = () => {
         <NavItem><NavLink to="/">Home</NavLink></NavItem>
         <NavItem><NavLink to="/galeria">Galeria</NavLink></NavItem>
         <NavItem><NavLink to="/educa-mais">Educa+</NavLink></NavItem>
-        <NavItem><LoginButton to="/login">Fazer Login</LoginButton></NavItem>
+        {isLoggedIn ? (
+          <NavItem>
+            <UserIcon to="/user/profile">
+              <FaUser /> {/* Ícone do usuário */}
+            </UserIcon>
+          </NavItem>
+        ) : (
+          <NavItem>
+            <LoginButton to="/login">Fazer Login</LoginButton>
+          </NavItem>
+        )}
       </NavLinks>
       <Hamburger onClick={toggleMenu}>
         <Bar />
