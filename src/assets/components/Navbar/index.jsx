@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link, useNavigate, useLocation } from 'react-router-dom'; // Adiciona useLocation para monitorar as rotas
+import { Link, useNavigate, useLocation } from 'react-router-dom'; 
 import { FaUser } from 'react-icons/fa';
 
 const NavbarContainer = styled.nav`
@@ -130,9 +130,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation(); // Para monitorar mudanças na rota
+  const location = useLocation();
 
   useEffect(() => {
+    
     const token = localStorage.getItem('token');
     setIsLoggedIn(!!token);
   }, []);
@@ -142,7 +143,7 @@ const Navbar = () => {
     if (isOpen) {
       setIsOpen(false);
     }
-  }, [location.pathname]); // Executa sempre que a rota mudar
+  }, [location.pathname]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -152,7 +153,7 @@ const Navbar = () => {
     const confirmLogout = window.confirm("Tem certeza que deseja sair?");
     if (confirmLogout) {
       localStorage.removeItem('token');
-      setIsLoggedIn(false);
+      setIsLoggedIn(false); 
       navigate('/');
     }
   };
@@ -160,6 +161,17 @@ const Navbar = () => {
   const closeMenu = () => {
     if (isOpen) {
       setIsOpen(false); // Fecha o menu
+    }
+  };
+
+  // Função que seta o token e atualiza o estado de login dinamicamente
+  const setToken = (token) => {
+    if (token) {
+      localStorage.setItem('token', token);
+      setIsLoggedIn(true); // Atualiza o estado de isLoggedIn para true
+    } else {
+      localStorage.removeItem('token');
+      setIsLoggedIn(false); // Atualiza o estado de isLoggedIn para false
     }
   };
 
