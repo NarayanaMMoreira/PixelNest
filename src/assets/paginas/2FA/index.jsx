@@ -138,7 +138,8 @@ const TwoFA = () => {
       );
 
       setMessage(response.data.msg); 
-      navigate('/'); // Redireciona para a página inicial após sucesso
+      window.location.reload();
+      navigate('/'); 
     } catch (error) {
       setMessage(error.response?.data?.msg || 'Erro ao verificar o código. Tente novamente.');
     }
