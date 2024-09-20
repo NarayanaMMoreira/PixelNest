@@ -60,9 +60,7 @@ const TextBox = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
-    max-width: none;
-    padding: 80px 0;
+    width: 80%;
 
     h1 {
       font-size: 3rem;
