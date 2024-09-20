@@ -47,7 +47,8 @@ const TextBox = styled.div`
   }
 
   @media (max-width: 768px) {
-    text-align: justify;
+    margin-top: 1rem
+    text-align: center;
     width: 80%;
 
     p {
