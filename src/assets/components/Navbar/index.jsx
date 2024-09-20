@@ -53,10 +53,12 @@ const NavLinks = styled.ul`
 `;
 
 const NavItem = styled.li`
+  display: flex;
   margin: 0;
 `;
 
 const NavLink = styled(Link)`
+  display: flex;
   color: #ffffff;
   text-decoration: none;
   font-size: 1.1rem;
@@ -69,6 +71,7 @@ const NavLink = styled(Link)`
 `;
 
 const Button = styled(Link)`
+  display: flex;
   padding: 0.2rem 1rem;
   background-color: #ffffff;
   border-radius: 20px;
@@ -83,8 +86,8 @@ const Button = styled(Link)`
 `;
 
 const UserIcon = styled(Link)`
+  display: flex;
   color: #ffffff;
-  padding: 0;
   font-size: 1.5rem;
 
   &:hover {
