@@ -67,7 +67,7 @@ const NavLink = styled(Link)`
   }
 `;
 
-const LoginButton = styled(Link)`
+const Button = styled(Link)`
   padding: 0.5rem 1rem;
   background-color: #ffffff;
   border-radius: 20px;
@@ -148,12 +148,12 @@ const Navbar = () => {
               </UserIcon>
             </NavItem>
             <NavItem>
-              <NavLink as="button" onClick={handleLogout}>Sair</NavLink>
+              <Button as="button" onClick={handleLogout}>Sair</Button>
             </NavItem>
           </>
         ) : (
           <NavItem>
-            <LoginButton to="/login">Fazer Login</LoginButton>
+            <Button to="/login">Fazer Login</Button>
           </NavItem>
         )}
       </NavLinks>
