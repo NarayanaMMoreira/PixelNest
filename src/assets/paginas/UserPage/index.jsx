@@ -123,9 +123,10 @@ const UserProfile = () => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');
-        // Enviando o token no corpo da requisição
-        const response = await axios.post('https://auth-login-api-v3kt.onrender.com/user/profile', {
-          token: token,
+        const response = await axios.get('https://auth-login-api-v3kt.onrender.com/user/profile', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         });
         setUserData(response.data);
       } catch (error) {
@@ -145,10 +146,10 @@ const UserProfile = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      // Enviando o token no corpo da requisição
-      const response = await axios.put('https://auth-login-api-v3kt.onrender.com/user/profile', {
-        token: token,
-        ...userData,
+      const response = await axios.put('https://auth-login-api-v3kt.onrender.com/user/profile', userData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
       setMessage(response.data.msg);
       setIsEditing(false);
