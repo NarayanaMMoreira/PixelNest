@@ -72,6 +72,7 @@ const RegisterPage = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [token, setToken] = useState(null); // Estado para armazenar o token JWT
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -83,7 +84,7 @@ const RegisterPage = () => {
     }
 
     // Formata a data de nascimento no formato AAAA-MM-DD
-    const formattedBirthdate = birthdate;
+    const formattedBirthdate = birthdate.split('T')[0];
 
     try {
       const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/register', {
@@ -96,9 +97,26 @@ const RegisterPage = () => {
         confirmPassword,
       });
 
-      setMessage(response.data.msg);
+      const { msg, token: jwtToken } = response.data; // Recebe a mensagem e o token
+
+      setMessage(msg);
+      setToken(jwtToken); // Armazena o token no estado
+
+      // Exemplo de como salvar o token no localStorage
+      if (jwtToken) {
+        localStorage.setItem('jwtToken', jwtToken);
+      }
     } catch (error) {
       console.error('Erro:', error);
+      console.error('Dados da requisição:', {
+        name,
+        username,
+        email,
+        birthdate: formattedBirthdate,
+        gender,
+        password,
+        confirmPassword,
+      });
       if (error.response) {
         setMessage(error.response.data.msg);
       } else {
@@ -197,6 +215,7 @@ const RegisterPage = () => {
           <Button type="submit">Cadastrar</Button>
         </form>
         {message && <p>{message}</p>}
+        {token && <p>Token recebido: {token}</p>} {/* Exibe o token se disponível */}
       </FormContainer>
     </SignupWrapper>
   );
