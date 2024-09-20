@@ -138,8 +138,8 @@ const TwoFA = () => {
       );
 
       setMessage(response.data.msg); 
-      window.location.reload();
       navigate('/'); 
+      window.location.reload();
     } catch (error) {
       setMessage(error.response?.data?.msg || 'Erro ao verificar o código. Tente novamente.');
     }
