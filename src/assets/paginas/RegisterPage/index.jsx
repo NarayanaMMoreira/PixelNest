@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Certifique-se de que useNavigate está importado
 
 const SignupWrapper = styled.div`
   display: flex;
@@ -119,7 +120,6 @@ const RequirementsText = styled.p`
   }
 `;
 
-
 const RegisterPage = () => {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
@@ -129,7 +129,6 @@ const RegisterPage = () => {
   const [password, setPassword] = useState('');
   const [confirmpassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
-  const [token, setToken] = useState(null); // Estado para armazenar o token JWT
 
   const navigate = useNavigate();
 
@@ -153,29 +152,16 @@ const RegisterPage = () => {
         birthdate: formattedBirthdate,
         gender,
         password,
-        confirmpassword,
       });
 
-      const { msg, token: jwtToken } = response.data; // Recebe a mensagem e o token
+      const { msg } = response.data; // Recebe a mensagem
 
       setMessage(msg);
-      setToken(jwtToken); // Armazena o token no estado
 
-      // Exemplo de como salvar o token no localStorage
-      if (jwtToken) {
-        navigate('/2fa'); // Redireciona para a homepage
-      }
+      // Redireciona para a página de 2FA ou outra página, se necessário
+      navigate('/2fa'); 
     } catch (error) {
       console.error('Erro:', error);
-      console.error('Dados da requisição:', {
-        name,
-        username,
-        email,
-        birthdate: formattedBirthdate,
-        gender,
-        password,
-        confirmpassword,
-      });
       if (error.response) {
         setMessage(error.response.data.msg);
       } else {
@@ -274,7 +260,6 @@ const RegisterPage = () => {
           <Button type="submit">Cadastrar</Button>
         </form>
         {message && <p>{message}</p>}
-        {token && <p>Token recebido: {token}</p>} {/* Exibe o token se disponível */}
       </FormContainer>
     </SignupWrapper>
   );

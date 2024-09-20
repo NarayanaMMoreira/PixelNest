@@ -122,21 +122,25 @@ const TwoFA = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Código 2FA:', code);
+    const token = localStorage.getItem('token'); // Obtém o token do localStorage
 
     try {
-        const token = localStorage.getItem('token'); // Supondo que você armazene o token no localStorage
-        const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/verify-2fa', {
-            token,
-            twofaCode: code,
-        });
+      const response = await axios.post('https://auth-login-api-v3kt.onrender.com/auth/verify-2fa', {
+        token, // Enviando o token JWT
+        twofaCode: code,
+      });
 
-        setMessage(response.data.msg); // Mensagem de sucesso
-        navigate('/home'); // Redireciona para a página inicial após sucesso
+      setMessage(response.data.msg); // Mensagem de sucesso
+
+      // Aqui você pode iniciar a sessão, por exemplo, armazenando o token em localStorage
+      localStorage.setItem('token', token); // Armazena o token, se necessário
+
+      navigate('/home'); // Redireciona para a página inicial após sucesso
     } catch (error) {
-        setMessage(error.response?.data?.msg || 'Erro ao verificar o código. Tente novamente.');
+      setMessage(error.response?.data?.msg || 'Erro ao verificar o código. Tente novamente.');
     }
-};
+  };
+
   return (
     <TwoFAWrapper>
       <Banner>

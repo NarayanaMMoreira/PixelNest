@@ -132,13 +132,10 @@ const Login = () => {
         password,
       });
       console.log('Resposta da API:', response.data);
-      const { msg, token } = response.data;
+      const { msg } = response.data;
 
       setMessage(msg);
-      if (token) {
-        localStorage.setItem('jwtToken', token); // Armazenando o token no localStorage
-        navigate('/2fa'); // Redireciona para a página de autenticação de dois fatores
-      }
+      navigate('/2fa'); // Redireciona para a página de autenticação de dois fatores
     } catch (error) {
       console.error('Erro:', error);
       if (error.response) {
