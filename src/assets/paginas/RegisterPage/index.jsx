@@ -80,10 +80,9 @@ const RegisterPage = () => {
         name,
         username,
         email,
-        birthdate,
+        birthdate: new Date(birthdate).toISOString(), // Converte a data para o formato ISO
         gender,
         password,
-        confirmPassword,
       });
       setMessage(response.data.msg);
     } catch (error) {
@@ -139,7 +138,6 @@ const RegisterPage = () => {
             <Input
               id="birthdate"
               type="date"
-              placeholder="Data de Nascimento"
               value={birthdate}
               onChange={(e) => setBirthdate(e.target.value)}
               required
@@ -154,9 +152,9 @@ const RegisterPage = () => {
               required
             >
               <option value="">Selecione o Gênero</option>
-              <option value="male">Masculino</option>
-              <option value="female">Feminino</option>
-              <option value="other">Outro</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="prefiro não identificar">Prefiro não identificar</option>
             </Select>
           </InputWrapper>
           <InputWrapper>
